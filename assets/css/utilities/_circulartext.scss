@@ -1,0 +1,48 @@
+#circle-text svg {
+  display: block;
+  overflow: visible;
+  padding: 1em;
+}
+textPath {
+  fill: currentColor;
+}
+.ct {
+  display: flex;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+}
+#circle-text {
+  text-transform: uppercase;
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: inherit;
+  letter-spacing: 0.175rem;
+}
+
+.arrow {
+  position: relative;
+  color: inherit;
+}
+
+#t {
+  overflow: visible;
+  animation: circular-text-rotate 5s linear paused infinite;
+  // animation-play-state: running;
+}
+#circle-text:hover #t {
+  animation-play-state: running;
+}
+#s path {
+  fill: none;
+}
+
+@keyframes circular-text-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

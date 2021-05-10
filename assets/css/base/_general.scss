@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: rgb(156, 145, 255) $background-primary-darker;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: $background-primary;
+
+  min-width: 320px;
+  height: 100%;
+  overflow-x: hidden;
+  transition: transform 0.5s ease-out;
+  scroll-behavior: smooth;
+
+  @media (min-width: $grid-breakpoint) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.open-menu {
+    @media (max-width: $grid-breakpoint - 1) {
+      transform: translateX($nav-responsive-width);
+    }
+  }
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(108, 92, 255, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(108, 92, 255, 0.3);
+  background-color: rgb(156, 145, 255);
+}
+
+body::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.4s ease;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+@keyframes fadeinmove {
+  from {
+    opacity: 0;
+    transform: translateX(+20%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.text-negative {
+  color: $text-negative;
+}
+
+.wrapper {
+  position: relative;
+  padding-left: 0;
+  top: $header-height-breakpoint;
+  height: calc(100% - #{$header-height-breakpoint});
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+
+  @media (min-width: $grid-breakpoint) {
+    height: auto;
+    top: initial;
+  }
+}
+
+.about__content {
+  font-size: 2rem;
+  line-height: 1.7;
+  letter-spacing: -0.2px;
+  text-align: justify;
+}
+
+.about__highlight {
+  color: $background-secondary;
+  font-weight: 600;
+}
+
+::selection {
+  background: $primary;
+  color: rgb(0, 0, 0);
+}
+
+.fa {
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover,
+  &.active,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.shape {
+  width: 100%;
+  max-height: 100%;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+li,
+ul {
+  list-style-type: none;
+}
+
+section {
+  margin-bottom: 2.4rem;
+
+  ul {
+    padding: 0;
+  }
+
+  @media (min-width: $screen-sm) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 0;
+  height: 3.6rem;
+  background-color: $blue-bg;
+  text-decoration: none;
+  color: $blue;
+  cursor: pointer;
+  border: 0;
+  border-radius: 1rem;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 250ms ease;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.btn-orange {
+  color: $orange;
+  background-color: $orange-bg;
+}
+
+button:hover {
+  color: $blue;
+  background-color: $blue-bg-light;
+  box-shadow: rgba(255, 255, 255, 0.1);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.btn-orange:hover {
+  color: $orange;
+  background-color: $orange-bg-light;
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    margin-bottom: 4px;
+  }
+
+  &__field {
+    transition: border 0.1s ease;
+    border: 1px solid $grey-3;
+    background-color: white;
+    padding: 0 8px;
+    height: 36px;
+    font-size: 16px;
+
+    &:active,
+    &:hover {
+      outline: none;
+      border: 1px solid $primary;
+    }
+
+    &:focus {
+      outline-offset: 0;
+      border: 1px solid $primary;
+    }
+
+    &:disabled {
+      background-color: grey;
+      pointer-events: none;
+    }
+  }
+}
+
+.ps {
+  height: 100vh;
+}
+
+.footer__main {
+  padding: 50px 0;
+  background: linear-gradient(
+    0,
+    var(--background-primary-darker),
+    transparent
+  ); // border-bottom: 1px solid $grey-1;
+}
+
+.footer__contact {
+  text-align: center;
+}

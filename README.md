@@ -1,0 +1,1 @@
+My nuxt based blog
