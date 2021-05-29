@@ -14,7 +14,7 @@ export default {
         $content,
         params
     }) {
-        const articles = await $content("articles", params.slug).fetch();
+        const articles = await $content("articles", params.slug).sortBy('key','desc').fetch();
 
         return {
             articles,

@@ -1,6 +1,6 @@
 <template>
   <button
-    class="relative overflow-hidden px-4 flex items-center bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+    class="relative overflow-hidden justify-center px-4 flex items-center bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
     @click="setCurrentTheme"
   >
     <transition name="from-bottom-to-bottom" mode="out-in">
@@ -46,8 +46,6 @@ export default {
 
 <style lang="scss">
 button {
-  outline: none;
-
   -webkit-text-stroke-width: 0px;
 }
 

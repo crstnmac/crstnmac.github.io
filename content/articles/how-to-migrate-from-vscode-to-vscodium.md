@@ -1,13 +1,14 @@
 ---
+key: 2
 name: how-to-migrate-from-vscode-to-vscodium
 title: How to port from vscode to vscodium(FOSS)
 year: 05 Feb 2020
 id: how-to-migrate-from-vscode-to-vscodium
-description: |
- VSCodium is a fork of Microsoft’s popular Visual Studio Code editor. It’s identical to VS Code with the single biggest difference that unlike VS Code, VSCodium doesn’t track your usage data.
+# description: |
+#  VSCodium is a fork of Microsoft’s popular Visual Studio Code editor. It’s identical to VS Code with the single biggest difference that unlike VS Code, VSCodium doesn’t track your usage data.
 ---
 
->VSCodium is a fork of Microsoft’s popular Visual Studio Code editor. It’s identical to VS Code with the single biggest difference that unlike VS Code, VSCodium doesn’t track your usage data.
+> VSCodium is a fork of Microsoft’s popular Visual Studio Code editor. It’s identical to VS Code with the single biggest difference that unlike VS Code, VSCodium doesn’t track your usage data.
 
 I am writing this blog post in [VSCodium](https://github.com/VScodium). What? Is that like VSCode?
 

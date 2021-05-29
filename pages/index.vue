@@ -11,8 +11,10 @@
           <h3>Software Engineer</h3>
           <p>and a dog lover.</p>
 
-          <button @click="twitter">Lets Chat</button>
-          <button @click="resume" class="btn-orange">Resume</button>
+          <div class="links-group">
+            <button @click="twitter" class="bt btn-blue">Lets Chat</button>
+            <button @click="resume" class="bt btn-orange">Resume</button>
+          </div>
         </div>
 
         <div class="hero_img">
@@ -46,9 +48,9 @@
 </template>
 
 <script>
-import Lottie from '~/components/Lottie.vue'
-import Experience from '~/components/Sections/ExperienceSection'
-import Links from '~/components/Sections/LinkSection'
+import Lottie from "~/components/Lottie.vue";
+import Experience from "~/components/Sections/ExperienceSection";
+import Links from "~/components/Sections/LinkSection";
 
 export default {
   components: {
@@ -59,70 +61,70 @@ export default {
 
   methods: {
     twitter() {
-      window.open('https://twitter.com/devcriston', '_blank')
+      window.open("https://twitter.com/devcriston", "_blank");
     },
     resume() {
       window.open(
-        'https://drive.google.com/file/d/1DtYJYKbh9E-A7DGvrvRUu9B1IJGnLBeE/view?usp=sharing',
-        '_blank'
-      )
+        "https://drive.google.com/file/d/1DtYJYKbh9E-A7DGvrvRUu9B1IJGnLBeE/view?usp=sharing",
+        "_blank"
+      );
     },
   },
 
   transition: {
-    name: 'slide-fade',
+    name: "slide-fade",
   },
 
   head() {
     return {
-      title: 'Criston Mascarenhas',
+      title: "Criston Mascarenhas",
       meta: [
         {
-          name: 'author',
-          content: 'Criston Mascarenhas',
+          name: "author",
+          content: "Criston Mascarenhas",
         },
         {
-          name: 'description',
-          property: 'og:description',
-          content: 'I’m a Front-End Developer based in India.',
-          hid: 'description',
+          name: "description",
+          property: "og:description",
+          content: "I’m a Front-End Developer based in India.",
+          hid: "description",
         },
         {
-          property: 'og:title',
-          content: 'Criston Mascarenhas',
+          property: "og:title",
+          content: "Criston Mascarenhas",
         },
         {
-          property: 'og:image',
+          property: "og:image",
           content: this.ogImage,
         },
         {
-          name: 'twitter:description',
-          content: 'I’m a Front-End Developer based in India.',
+          name: "twitter:description",
+          content: "I’m a Front-End Developer based in India.",
         },
         {
-          name: 'twitter:image',
+          name: "twitter:image",
           content: this.ogImage,
         },
       ],
-    }
+    };
   },
   computed: {
-    ogImage: function() {
-      return `${require(`@/assets/images/logo-cris.png`)}`
+    ogImage: function () {
+      return `${require(`@/assets/images/logo-cris.png`)}`;
     },
-    calculateAge: function() {
-      let currentDate = new Date()
-      let birthDate = new Date('1998/12/22')
-      let difference = currentDate - birthDate
-      let age = Math.floor(difference / 31557600000)
-      return age
+    calculateAge: function () {
+      let currentDate = new Date();
+      let birthDate = new Date("1998/12/22");
+      let difference = currentDate - birthDate;
+      let age = Math.floor(difference / 31557600000);
+      return age;
     },
-    calculateExperience: function() {
-      let currentDate = new Date()
-      let startDate = new Date('2018/04/01')
-      let difference = currentDate - startDate
-      let experience = Math.floor(difference / 31557600000)
-      return experience
+    calculateExperience: function () {
+      let currentDate = new Date();
+      let startDate = new Date("2018/04/01");
+      let difference = currentDate - startDate;
+      let experience = Math.floor(difference / 31557600000);
+      return experience;
     },
   },
   asyncData() {
@@ -130,9 +132,9 @@ export default {
       lottieOptions: {
         animationData: require(`~/assets/animated/idea.json`),
       },
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -154,5 +156,29 @@ export default {
 .hero_img {
   width: 100%;
   padding: 2em;
+}
+
+.bt {
+  width: 100%;
+  height: 3em;
+}
+
+.btn-blue:hover {
+  color: $blue;
+  background-color: $blue-bg-light;
+  backdrop-filter: saturate(180%) blur(20px);
+  border: 2px dashed $blue;
+}
+
+.btn-orange {
+  color: $orange;
+  background-color: $orange-bg;
+}
+
+.btn-orange:hover {
+  color: $orange;
+  background-color: $orange-bg-light;
+  backdrop-filter: saturate(180%) blur(20px);
+  border: 2px dashed $orange;
 }
 </style>

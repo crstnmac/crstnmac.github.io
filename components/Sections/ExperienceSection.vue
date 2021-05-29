@@ -107,81 +107,82 @@ export default {
     return {
       elements: [
         {
-          name: 'Public Speaking',
-          emoji: 'fancy-face',
+          name: "Public Speaking",
+          emoji: "fancy-face",
           info: [
             {
-              place: 'Bangalore,IN',
-              date: '25 Jan 2020',
-              topic: 'Workshop - Fullstack Webapp using Vue & MongoDB',
-              event: 'Free Software Movement Karnataka',
-              eventlink: 'https://fsmk.org',
+              place: "Bangalore,IN",
+              date: "25 Jan 2020",
+              topic: "Workshop - Fullstack Webapp using Vue & MongoDB",
+              event: "Free Software Movement Karnataka",
+              eventlink: "https://fsmk.org",
               description:
-                'In this 1 week workshop I spoke about how you can make a web application using Vue,MongoDB and NodeJS',
-              img: 'fsmk2020',
-              imgAlt: 'Image',
+                "In this 1 week workshop I spoke about how you can make a web application using Vue,MongoDB and NodeJS",
+              img: "fsmk2020",
+              imgAlt: "Image",
             },
           ],
         },
         {
-          name: 'Work Experience',
-          emoji: 'boy-coding',
+          name: "Work Experience",
+          emoji: "boy-coding",
           info: [
             {
-              place: 'Bangalore,IN',
-              topic: 'Software Engineer',
-              event: 'GlobalLogic',
-              eventlink: 'https://globallogic.com',
-              description: 'Working as a Trainee Software Engineer.',
-              active: 'Present',
-              gif: 'globallogic',
+              place: "Bangalore,IN",
+              date: "March'21",
+              topic: "Software Engineer",
+              event: "GlobalLogic",
+              eventlink: "https://globallogic.com",
+              description: "Working as a Trainee Software Engineer.",
+              active: "Present",
+              gif: "globallogic",
             },
             {
-              place: 'Mumbai,IN',
+              place: "Mumbai,IN",
               date: "Jun'19 - Jul'19",
-              topic: 'Internship',
-              event: 'SlashRTC',
-              eventlink: 'https://www.slashrtc.com/',
+              topic: "Internship",
+              event: "SlashRTC",
+              eventlink: "https://www.slashrtc.com/",
               description:
-                'Here I develped the dashboard for Dialogflow of a chatbot using ReactJS',
-              img: 'slashrtc',
-              imgAlt: 'Image',
+                "Here I develped the dashboard for Dialogflow of a chatbot using ReactJS",
+              img: "slashrtc",
+              imgAlt: "Image",
             },
           ],
         },
         {
-          name: 'Education',
-          emoji: 'nerd',
+          name: "Education",
+          emoji: "nerd",
           info: [
             {
-              place: 'Everywhere',
-              topic: 'Self-learner',
+              place: "Everywhere",
+              topic: "Self-learner",
               about:
-                'From each job, class, co-worker, book, article, meet-up or life experience.',
+                "From each job, class, co-worker, book, article, meet-up or life experience.",
               description:
                 "This is how I learnt the 80% of what I know now and how I improve it. At the moment I'm learning ",
-              learnt: 'TypeScript,Vue 3 & Python',
-              gif: 'selflearn',
-              active: 'Always',
+              learnt: "TypeScript,Vue 3 & Python",
+              gif: "selflearn",
+              active: "Always",
             },
             {
-              place: 'Mangalore,IN',
+              place: "Mangalore,IN",
               date: "Aug'16 - Sep'20",
-              topic: 'Computer Science, Bachelor Degree',
-              event: 'Vivekananda College of Engineering and Technology',
-              eventlink: 'https://vtu.ac.in',
+              topic: "Computer Science, Bachelor Degree",
+              event: "Vivekananda College of Engineering and Technology",
+              eventlink: "https://vtu.ac.in",
               description:
-                'I studied my university degree under Visvesvaraya Technological University(VTU). Here is what I learnt: ',
-              learnt: 'Engineering Subjects, Grow as a person',
-              img: 'vcet',
-              imgAlt: 'VCET Puttur',
+                "I studied my university degree under Visvesvaraya Technological University(VTU). Here is what I learnt: ",
+              learnt: "Engineering Subjects, Grow as a person",
+              img: "vcet",
+              imgAlt: "VCET Puttur",
             },
           ],
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -196,7 +197,7 @@ export default {
   position: relative;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     bottom: 14rem;
@@ -214,13 +215,13 @@ export default {
     min-height: 5rem;
 
     &:after {
-      content: ' ';
+      content: " ";
       display: table;
       clear: both;
     }
 
     &:before {
-      content: ' ';
+      content: " ";
       display: table;
     }
   }
@@ -259,7 +260,7 @@ export default {
   line-height: 0;
 
   &:after {
-    content: ' ';
+    content: " ";
     display: block;
     position: absolute;
     top: -5px;

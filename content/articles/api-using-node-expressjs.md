@@ -1,10 +1,11 @@
 ---
+key: 1
 name: api-using-node-expressjs
 title: Build an API using NodeJS and ExpressJS
 year: 03 Feb 2020
 id: api-using-node-expressjs
-description: |
-  REST or RESTful stands for REpresentational State Transfer. It is an architectural style as well as an approach for communications purposes that is often used in various web services development. In simpler terms, it is an application program interface (API) that makes use of the HTTP requests to GET, PUT, POST and DELETE the data over WWW.
+# description: |
+#   REST or RESTful stands for REpresentational State Transfer. It is an architectural style as well as an approach for communications purposes that is often used in various web services development. In simpler terms, it is an application program interface (API) that makes use of the HTTP requests to GET, PUT, POST and DELETE the data over WWW.
 ---
 
 ## What is REST API

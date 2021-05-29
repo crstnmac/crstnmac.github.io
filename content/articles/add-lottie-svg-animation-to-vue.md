@@ -1,10 +1,11 @@
 ---
+key: 3
 name: add-lottie-svg-animation-to-vue
 title: How to add Lottie svg animations to Vuejs/Nuxtjs
 year: 30 May 2020
 id: add-lottie-svg-animation-to-vue
-description: |
-  Add lottie svg animations to your vue/nuxt project.
+# description: |
+#   Add lottie svg animations to your vue/nuxt project.
 ---
 
 ### Step 1: Create a Nuxt project

@@ -44,21 +44,21 @@
 </template>
 
 <script>
-import ColorMode from '@/components/ColorMode.vue'
+import ColorMode from "@/components/ColorMode.vue";
 
 export default {
   components: { ColorMode },
   data() {
     return {
       isActive: false,
-    }
+    };
   },
   methods: {
     projects() {
-      window.open('https://github.com/crstnmac', '_blank')
+      window.open("https://github.com/crstnmac", "_blank");
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

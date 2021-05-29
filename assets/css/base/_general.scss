@@ -166,12 +166,12 @@ button {
   display: inline-block;
   padding: 1rem 2rem;
   margin: 0;
-  height: 3.6rem;
+  // height: 3.6rem;
   background-color: $blue-bg;
   text-decoration: none;
   color: $blue;
   cursor: pointer;
-  border: 0;
+  border: 2px dashed transparent;
   border-radius: 1rem;
   text-align: center;
   transition: background 250ms ease-in-out, transform 250ms ease;
@@ -185,6 +185,7 @@ button {
 .btn-orange {
   color: $orange;
   background-color: $orange-bg;
+  border: 2px dashed transparent;
 }
 
 button:hover {
@@ -192,6 +193,7 @@ button:hover {
   background-color: $blue-bg-light;
   box-shadow: rgba(255, 255, 255, 0.1);
   backdrop-filter: saturate(180%) blur(20px);
+  border: 2px dashed $blue;
 }
 
 .btn-orange:hover {
@@ -257,4 +259,24 @@ button:active {
 
 .footer__contact {
   text-align: center;
+}
+
+.links-group {
+  margin: 0;
+
+  @media (min-width: $screen-sm) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    display: grid;
+  }
+
+  @media (max-width: $screen-md) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    display: grid;
+  }
+
+  li {
+    display: block;
+  }
 }
