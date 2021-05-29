@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: criston.codes
+Token: 1e8e47e8c033d13818dad97e5580b1009bddccfb294518b446ca2c0ae97b7b8c
