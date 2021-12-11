@@ -35,7 +35,7 @@ export default {
                     style: "bt btn-gitlab",
                 },
                 linkedin: {
-                    link: "https://linkedin.com/in/criscodes",
+                    link: "https://linkedin.com/in/devcriston",
                     icon: "linkedin",
                     style: "bt btn-linkedin",
                 },

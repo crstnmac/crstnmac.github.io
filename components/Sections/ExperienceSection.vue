@@ -133,7 +133,7 @@ export default {
               topic: "Software Engineer",
               event: "GlobalLogic",
               eventlink: "https://globallogic.com",
-              description: "Working as a Trainee Software Engineer.",
+              description: "Working as a Software Engineer.",
               active: "Present",
               gif: "globallogic",
             },
@@ -161,7 +161,7 @@ export default {
                 "From each job, class, co-worker, book, article, meet-up or life experience.",
               description:
                 "This is how I learnt the 80% of what I know now and how I improve it. At the moment I'm learning ",
-              learnt: "TypeScript,Vue 3 & Python",
+              learnt: "TypeScript,Angular & Spring Boot",
               gif: "selflearn",
               active: "Always",
             },
