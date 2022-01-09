@@ -106,23 +106,7 @@ export default {
   data() {
     return {
       elements: [
-        {
-          name: "Public Speaking",
-          emoji: "fancy-face",
-          info: [
-            {
-              place: "Bangalore,IN",
-              date: "25 Jan 2020",
-              topic: "Workshop - Fullstack Webapp using Vue & MongoDB",
-              event: "Free Software Movement Karnataka",
-              eventlink: "https://fsmk.org",
-              description:
-                "In this 1 week workshop I spoke about how you can make a web application using Vue,MongoDB and NodeJS",
-              img: "fsmk2020",
-              imgAlt: "Image",
-            },
-          ],
-        },
+       
         {
           name: "Work Experience",
           emoji: "boy-coding",
@@ -146,6 +130,23 @@ export default {
               description:
                 "Here I develped the dashboard for Dialogflow of a chatbot using ReactJS",
               img: "slashrtc",
+              imgAlt: "Image",
+            },
+          ],
+        },
+         {
+          name: "Public Speaking",
+          emoji: "fancy-face",
+          info: [
+            {
+              place: "Bangalore,IN",
+              date: "25 Jan 2020",
+              topic: "Workshop - Fullstack Webapp using Vue & MongoDB",
+              event: "Free Software Movement Karnataka",
+              eventlink: "https://fsmk.org",
+              description:
+                "In this 1 week workshop I spoke about how you can make a web application using Vue,MongoDB and NodeJS",
+              img: "fsmk2020",
               imgAlt: "Image",
             },
           ],

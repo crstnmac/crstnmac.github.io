@@ -22,7 +22,11 @@
         </div>
       </section>
 
-      <section id="about">
+      <Experience />
+
+      <Links />
+
+       <section id="about">
         <h2>About me</h2>
         <span class="emoji-title emoji--thinking"></span>
         <p class="about__content">
@@ -40,9 +44,6 @@
           {{ calculateExperience }} of them.
         </p>
       </section>
-      <Links />
-
-      <Experience />
     </div>
   </div>
 </template>
@@ -65,7 +66,7 @@ export default {
     },
     resume() {
       window.open(
-        "https://drive.google.com/file/d/1DtYJYKbh9E-A7DGvrvRUu9B1IJGnLBeE/view?usp=sharing",
+        "https://drive.google.com/file/d/1IYiTjZYlIXaMTz0V-bStuoTSYk9VGmfx/view?usp=sharing",
         "_blank"
       );
     },
