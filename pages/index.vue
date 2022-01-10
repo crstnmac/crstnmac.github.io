@@ -12,7 +12,7 @@
           <p>and a dog lover.</p>
 
           <div class="links-group">
-            <button @click="twitter" class="bt btn-blue">Lets Chat</button>
+            <button @click="twitter" class="bt btn-green">Lets Chat</button>
             <button @click="resume" class="bt btn-orange">Resume</button>
           </div>
         </div>
@@ -22,11 +22,9 @@
         </div>
       </section>
 
-      <Experience />
-
       <Links />
 
-       <section id="about">
+      <section id="about">
         <h2>About me</h2>
         <span class="emoji-title emoji--thinking"></span>
         <p class="about__content">
@@ -44,6 +42,8 @@
           {{ calculateExperience }} of them.
         </p>
       </section>
+
+      <Experience />
     </div>
   </div>
 </template>

@@ -1,29 +1,50 @@
 <template>
   <button
-    class="relative overflow-hidden justify-center px-4 flex items-center bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+    class="
+      relative
+      overflow-hidden
+      justify-center
+      px-4
+      flex
+      items-center
+      bg-gray-200
+      dark:bg-dark-surface dark:text-dark-onSurfaceSecondary
+      rounded-full
+      outline-none
+      text-light-onSurfacePrimary
+      dark:text-dark-onSurfacePrimary
+      transition-colors
+      duration-300
+      ease-linear
+    "
+    v-bind:class="{
+      'btn-orange ': $colorMode.preference === 'light',
+      'btn-green ': $colorMode.preference === 'system',
+      'btn-night ': $colorMode.preference === 'dark',
+    }"
     @click="setCurrentTheme"
   >
     <transition name="from-bottom-to-bottom" mode="out-in">
       <span
         v-if="$colorMode.preference === 'dark'"
         key="dark"
-        class="inline-block font-medium mr-1"
+        class="inline-block large mr-1"
       >
-        Dark
+        🌚
       </span>
       <span
         v-if="$colorMode.preference === 'system'"
         key="system"
-        class="inline-block font-medium mr-1"
+        class="inline-block large mr-1"
       >
-        System
+        💻
       </span>
       <span
         v-else-if="$colorMode.preference === 'light'"
         key="light"
-        class="inline-block font-medium mr-1"
+        class="inline-block large mr-1"
       >
-        Light
+        🌞
       </span>
     </transition>
   </button>
@@ -46,7 +67,16 @@ export default {
 
 <style lang="scss">
 button {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   -webkit-text-stroke-width: 0px;
+}
+
+.rounded-full {
+  border-radius: 100%;
 }
 
 .show {

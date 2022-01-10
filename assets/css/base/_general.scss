@@ -24,7 +24,7 @@ body {
   }
 
   &.open-menu {
-    @media (max-width: $grid-breakpoint - 1) {
+    @media (max-width: ($grid-breakpoint - 1px)) {
       transform: translateX($nav-responsive-width);
     }
   }
@@ -158,7 +158,7 @@ section {
   }
 
   @media (min-width: $screen-sm) {
-    margin-bottom: 7.2rem;
+    margin-bottom: 3.2rem;
   }
 }
 
@@ -174,18 +174,12 @@ button {
   border: 2px dashed transparent;
   border-radius: 1rem;
   text-align: center;
-  transition: background 250ms ease-in-out, transform 250ms ease;
+  transition: background-color 250ms ease-in-out, transform 250ms ease;
 
   -webkit-appearance: none;
   -moz-appearance: none;
   text-transform: uppercase;
   font-weight: 600;
-}
-
-.btn-orange {
-  color: $orange;
-  background-color: $orange-bg;
-  border: 2px dashed transparent;
 }
 
 button:hover {
@@ -196,10 +190,54 @@ button:hover {
   border: 2px dashed $blue;
 }
 
+.btn-orange {
+  color: $orange;
+  background-color: $orange-bg;
+  border: 2px dashed transparent;
+}
+
 .btn-orange:hover {
   color: $orange;
   background-color: $orange-bg-light;
   backdrop-filter: saturate(180%) blur(20px);
+  border: 2px dashed $orange;
+}
+
+.btn-green {
+  color: $green;
+  background-color: $green-bg;
+  border: 2px dashed transparent;
+}
+
+.btn-green:hover {
+  color: $green;
+  background-color: $green-bg-light;
+  backdrop-filter: saturate(180%) blur(20px);
+  border: 2px dashed $green;
+}
+
+.btn-github {
+  color: $github;
+  background-color: $github-bg;
+}
+
+.btn-github:hover {
+  color: $github;
+  background-color: $github-bg-light;
+  backdrop-filter: saturate(180%) blur(20px);
+  border: 2px dashed $github;
+}
+
+.btn-night {
+  color: white;
+  background-color: $github-bg;
+}
+
+.btn-night:hover {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgba(71, 71, 71, 0.671);
+  backdrop-filter: saturate(180%) blur(20px);
+  border: 2px dashed white;
 }
 
 button:focus {
@@ -255,6 +293,12 @@ button:active {
     var(--background-primary-darker),
     transparent
   ); // border-bottom: 1px solid $grey-1;
+}
+
+.footer__copyright {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
 .footer__contact {

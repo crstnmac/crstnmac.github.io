@@ -7,7 +7,6 @@ npm-debug.log
 # Nuxt build
 .nuxt
 
-
-
 .DS_Store
 .idea
+jsconfig.json
