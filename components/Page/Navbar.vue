@@ -31,7 +31,7 @@ const menus = computed((): IMenuItem[] => [
     <template #menu>
       <div class="relative hidden lg:flex items-center">
         <nav
-          class="text-sm leading-6 font-semibold text-gray-600 dark:text-gray-300"
+          class="text-sm leading-6 font-semibold text-dark-600 dark:text-dark-300"
           role="navigation"
         >
           <ul class="flex items-center">
@@ -56,7 +56,7 @@ const menus = computed((): IMenuItem[] => [
         </nav>
       </div>
       <div
-        class="flex space-x-4 border-l ml-auto pl-6 border-gray-900/10 dark:border-gray-50/[0.2] ml-auto"
+        class="lg:flex hidden space-x-4 border-l pl-6 border-dark-900/10 dark:border-dark-50/[0.2] ml-auto"
       >
         <ThemeSwitcher />
         <Anchor
@@ -72,14 +72,14 @@ const menus = computed((): IMenuItem[] => [
       <ActionSheet @onClose="toggleOptions(false)">
         <ActionSheetBody>
           <ActionSheetHeader text="Menu" />
-          <nav class="leading-6 font-semibold text-gray-600 dark:text-gray-300">
+          <nav class="leading-6 font-semibold text-dark-600 dark:text-dark-300">
             <ul class="flex flex-col">
               <li
                 v-for="(item, i) in menus"
                 :key="i"
                 class="flex w-full"
                 :class="{
-                  'pb-2 mb-2 border-b border-gray-900/10 dark:border-gray-50/[0.2]':
+                  'pb-2 mb-2 border-b border-dark-900/10 dark:border-dark-50/[0.2]':
                     item.type === 'link',
                 }"
               >
@@ -106,9 +106,6 @@ const menus = computed((): IMenuItem[] => [
           </div>
           <div class="mt-2">
             <ThemeSwitcher type="select-box" />
-          </div>
-          <div class="mt-6 text-sm font-bold capitalize">
-            {{ $t('components.language_switcher.change_language') }}
           </div>
         </ActionSheetBody>
         <Button
