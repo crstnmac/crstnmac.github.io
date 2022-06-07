@@ -19,6 +19,8 @@ const props = defineProps({
 // state
 const themeSetting = useState<IThemeSettingOptions>('theme.setting')
 const currentStyle = toRef(props, 'type')
+
+console.log(themeSetting)
 </script>
 
 <template>

@@ -33,17 +33,17 @@ const styles = reactive<{
   [key: string]: string
 }>({
   primary:
-    'text-dark hover:bg-gray-200 dark:text-white dark:hover:bg-dark-300  p-4 rounded-lg border-none',
+    'text-dark hover:bg-gray-200 dark:text-white dark:hover:bg-dark-300  p-4 border-none',
   secondary:
-    'text-dark-800 bg-white hover:bg-dark-200 dark:text-white dark:bg-dark-900  dark:hover:bg-dark-600 rounded-lg border-none',
+    'text-dark-800 bg-white hover:bg-dark-200 dark:text-white dark:bg-dark-900  dark:hover:bg-dark-600 border-none',
 })
 const sizes = reactive<{
   [key: string]: string
 }>({
   lg: 'h-12 px-8 text-lg rounded-lg',
-  md: 'h-10 px-6 text-base rounded',
-  sm: 'h-8 px-4 text-sm rounded',
-  xs: 'h-6 px-3 text-xs rounded',
+  md: 'h-10 px-6 text-base rounded-lg',
+  sm: 'h-8 px-4 text-sm rounded-lg',
+  xs: 'h-6 px-3 text-xs rounded-lg',
 })
 
 // state

@@ -15,6 +15,20 @@
         <div class="text-md mt-4 font-semibold italic text-gray-400">
           "Make it work, make it right, make it fast." - Kent Beck
         </div>
+        <div>
+          <Anchor
+            href="https://open.spotify.com/user/xpxdzn2hztvea9akz2unakmuc?si=2952e56832614360s"
+            target="_blank"
+          >
+            <img
+              src="https://crstnmac.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff"
+              alt="spotify"
+              width="100"
+              height="100"
+              class="inline-block w-full rounded-xl"
+            />
+          </Anchor>
+        </div>
       </div>
       <div class="mb-8 md:ml-auto w-45">
         <img
