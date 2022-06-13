@@ -29,6 +29,9 @@ pages:
   blog:
     nav: blog
     title: blog
+  projects:
+    nav: projects
+    title: projects
 banners:
   welcome: hello, welcome to %{app_name}!
 others:

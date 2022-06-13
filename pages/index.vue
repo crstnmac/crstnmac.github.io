@@ -9,6 +9,7 @@ definePageMeta({
   <PageWrapper class="flex justify-center items-center">
     <div class="w-full">
       <AboutMe />
+      <Work />
     </div>
   </PageWrapper>
 </template>

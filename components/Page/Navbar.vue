@@ -23,13 +23,18 @@ const menus = computed((): IMenuItem[] => [
     text: t('pages.snippets.nav'),
     route: { name: 'snippets' },
   },
+  {
+    type: 'button',
+    text: t('pages.projects.nav'),
+    route: { name: 'projects' },
+  },
 ])
 </script>
 
 <template>
   <BuilderNavbar>
     <template #menu>
-      <div class="relative hidden lg:flex items-center">
+      <div class="relative hidden md:flex items-center">
         <nav
           class="text-sm leading-6 font-semibold text-dark-600 dark:text-dark-300"
           role="navigation"
@@ -56,7 +61,7 @@ const menus = computed((): IMenuItem[] => [
         </nav>
       </div>
       <div
-        class="lg:flex hidden space-x-4 border-l pl-6 border-dark-900/10 dark:border-dark-50/[0.2] ml-auto"
+        class="md:flex hidden space-x-4 border-l pl-6 border-dark-900/10 dark:border-dark-50/[0.2] ml-auto"
       >
         <ThemeSwitcher />
         <Anchor

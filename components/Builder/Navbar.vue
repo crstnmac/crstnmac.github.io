@@ -70,7 +70,7 @@ const toggleOptions = (show?: boolean) => {
           <!-- options:toggle -->
           <div
             v-if="$slots['options']"
-            class="flex-1 flex justify-end lg:hidden"
+            class="flex-1 flex justify-end md:hidden"
           >
             <button
               class="flex items-center focus:outline-none"

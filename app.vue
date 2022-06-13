@@ -17,3 +17,7 @@ AppSetup()
 const theme = useState<ITheme>('theme.current')
 const locale = useState<string>('locale.setting')
 </script>
+
+<style>
+@import '@unocss/reset/tailwind.css';
+</style>

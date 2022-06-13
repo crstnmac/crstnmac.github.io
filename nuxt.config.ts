@@ -29,13 +29,7 @@ export default defineNuxtConfig({
   },
 
   // css
-  css: [
-    'virtual:windi-base.css',
-    'virtual:windi-components.css',
-    'virtual:windi-utilities.css',
-    '~/assets/sass/vendor.scss',
-    '~/assets/sass/app.scss',
-  ],
+  css: ['~/assets/sass/vendor.scss', '~/assets/sass/app.scss'],
 
   // plugins
   plugins: ['~/plugins/navbar.ts'],
@@ -45,9 +39,21 @@ export default defineNuxtConfig({
     transpile: ['@headlessui/vue'],
   },
 
+  modules: ['@unocss/nuxt'],
+
+  unocss: {
+    // presets
+    uno: true, // enabled `@unocss/preset-uno`
+    icons: true, // enabled `@unocss/preset-icons`
+    attributify: true, // enabled `@unocss/preset-attributify`,
+
+    // core options
+    shortcuts: [],
+    rules: [],
+  },
+
   // build modules
   buildModules: [
-    'nuxt-windicss',
     '@nuxtjs/eslint-module',
     'unplugin-icons/nuxt',
     '@pinia/nuxt',
@@ -91,19 +97,5 @@ export default defineNuxtConfig({
   // vueuse
   vueuse: {
     ssrHandlers: true,
-  },
-
-  // windicss
-  windicss: {
-    analyze: {
-      analysis: {
-        interpretUtilities: false,
-      },
-      server: {
-        port: 4000,
-        open: false,
-      },
-    },
-    scan: true,
   },
 })

@@ -4,7 +4,6 @@
   "compilerOptions": {
     "strict": true,
     "types": [
-      "nuxt-windicss",
       "@vueuse/nuxt",
       "@intlify/nuxt3",
       "@pinia/nuxt"

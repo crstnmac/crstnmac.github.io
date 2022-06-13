@@ -1,2 +1,2 @@
 ## **Portfolio Website**
-#### using nuxt 3 & windicss
+#### using nuxt 3 & Unocss
