@@ -49,10 +49,10 @@
               :class="
                 ex.active
                   ? `border-violet-700	
-                                                border-dotted animate-[spin_15s_linear_infinite]`
+                                                            border-dotted animate-[spin_15s_linear_infinite]`
                   : ex.youtube
                   ? `border-red-700	
-                                                border-dotted animate-[spin_15s_linear_infinite]`
+                                                            border-dotted animate-[spin_15s_linear_infinite]`
                   : ``
               "
             ></div>
@@ -96,12 +96,12 @@
                 v-if="ex.img"
                 rounded-full
                 w-20
-                :src="`experiences/${ex.img}.png`"
+                :src="`/images/experiences/${ex.img}.png`"
                 :alt="ex.description"
               />
               <img
                 v-if="ex.gif"
-                :src="`experiences/${ex.gif}.gif`"
+                :src="`/images/experiences/${ex.gif}.gif`"
                 :width="'80px'"
                 :height="'80px'"
                 :classes="`img`"
