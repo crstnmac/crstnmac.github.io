@@ -69,11 +69,18 @@ const onClick = () => {
     <slot>{{ text }}</slot>
   </NuxtLink>
   <a
-    v-else
+    v-else-if="href"
     :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`"
     :href="href"
     @click="onClick"
   >
     <slot>{{ text }}</slot>
   </a>
+  <button
+    v-else
+    :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`"
+    @click="onClick"
+  >
+    <slot>{{ text }}</slot>
+  </button>
 </template>
