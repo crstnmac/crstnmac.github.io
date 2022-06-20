@@ -11,6 +11,7 @@ declare module '@nuxt/schema' {
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+  ssr: false,
   // app
   app: {
     head: {
