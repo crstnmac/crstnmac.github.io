@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-start mx-auto pb-16">
+  <div class="flex flex-col justify-center items-start mx-auto pb-8">
     <div class="flex flex-col-reverse w-full sm:flex-row items-center">
       <div class="flex flex-col pr-8 ml-6">
         <div class="text-4xl font-extrabold">Criston Mascarenhas</div>
@@ -15,16 +15,16 @@
         <div class="text-md mt-4 font-semibold italic text-gray-400">
           "Make it work, make it right, make it fast." - Kent Beck
         </div>
-        <div>
+        <div class="mt-4">
           <Anchor
-            href="https://open.spotify.com/user/xpxdzn2hztvea9akz2unakmuc?si=2952e56832614360s"
+            href="https://discord.com/users/484623360899284992"
             target="_blank"
           >
             <img
-              src="https://crstnmac.vercel.app/api/spotify?background_color=0d1117&border_color=ffffff"
-              alt="spotify"
-              width="100"
-              height="100"
+              src="https://lanyard.cnrad.dev/api/484623360899284992"
+              alt="discord"
+              width="auto"
+              height="auto"
               class="inline-block w-full rounded-xl"
             />
           </Anchor>

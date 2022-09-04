@@ -2,7 +2,7 @@
   <div px-6>
     <section id="experience">
       <div v-for="(elem, index) in elements" :key="index" :elem="elem">
-        <h2 text-3xl font-bold mt-2em mb-1em>{{ elem.name }}</h2>
+        <h2 class="text-3xl font-bold mt-5px mb-1em">{{ elem.name }}</h2>
         <span :class="`emoji-title emoji--${elem.emoji}`"></span>
 
         <ul
@@ -49,10 +49,10 @@
               :class="
                 ex.active
                   ? `border-violet-700	
-                                    border-dotted animate-[spin_15s_linear_infinite]`
+                                  border-dotted animate-[spin_15s_linear_infinite]`
                   : ex.youtube
                   ? `border-red-700	
-                                    border-dotted animate-[spin_15s_linear_infinite]`
+                                  border-dotted animate-[spin_15s_linear_infinite]`
                   : ``
               "
             ></div>
