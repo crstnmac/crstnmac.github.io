@@ -3,8 +3,8 @@
 
 ###  &nbsp; &nbsp; &nbsp; **TODO**
 
-- [ ] Add grid layout drag and drop ()
+- [x] Add grid layout drag and drop ()
 - [ ] Add animations
-- [ ] Add medium blog links
+- [x] Add medium blog links
 - [ ] add projects
 - [ ] add usefull code snippets
