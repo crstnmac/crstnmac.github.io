@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   target: 'static',
   ssr: false,
   router: {
-    base: '/crstnmac.github.io/',
+    base: '/https://github.com/crstnmac/crstnmac.github.io/',
   },
   // app
   app: {
