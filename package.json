@@ -45,6 +45,7 @@
     "postcss": "8.4.7",
     "postcss-loader": "^6.2.1",
     "prettier": "^2.5.0",
+    "push-dir": "^0.4.1",
     "rss-to-json": "^2.1.0",
     "rss-url-parser": "^2.2.4",
     "sass": "1.49.9",
