@@ -12,7 +12,11 @@ declare module '@nuxt/schema' {
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
+  target: 'static',
   ssr: false,
+  router: {
+    base: 'https://github.com/crstnmac/crstnmac.github.io/',
+  },
   // app
   app: {
     head: {
