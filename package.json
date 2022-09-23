@@ -40,14 +40,12 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^7.0.0",
     "lint-staged": "^12.3.3",
-    "nuxt": "3.0.0-rc.10",
+    "nuxt": "^3.0.0-rc.11",
     "pinia": "^2.0.20",
     "postcss": "8.4.7",
     "postcss-loader": "^6.2.1",
     "prettier": "^2.5.0",
     "push-dir": "^0.4.1",
-    "rss-to-json": "^2.1.0",
-    "rss-url-parser": "^2.2.4",
     "sass": "1.49.9",
     "sass-loader": "^12.4.0",
     "stream-browserify": "^3.0.0",
@@ -64,7 +62,6 @@
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
-    "rss-parser": "^3.12.0",
     "vue3-drr-grid-layout": "^1.8.0"
   }
 }

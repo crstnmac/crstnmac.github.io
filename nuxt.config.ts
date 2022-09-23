@@ -76,6 +76,7 @@ export default defineNuxtConfig({
   // experimental features
   experimental: {
     reactivityTransform: true,
+    payloadExtraction: false,
   },
 
   // auto import components
