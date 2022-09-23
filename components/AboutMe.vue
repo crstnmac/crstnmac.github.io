@@ -3,7 +3,7 @@
     <div class="flex flex-col-reverse w-full sm:flex-row items-center">
       <div class="flex flex-col pr-8 ml-6">
         <div
-          class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-purple-500 to-green-400 dark:from-yellow-300 dark:via-purple-400 dark:to-green-300"
+          class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-purple-500 to-green-400 dark:from-yellow-300 dark:via-purple-400 dark:to-green-300"
         >
           Criston Mascarenhas
         </div>

@@ -2,7 +2,7 @@
   <div class="dark:bg-dark-900">
     <slot name="app-before" />
     <div id="app-before"></div>
-    <div class="flex flex-col min-h-screen max-w-2xl pt-6 mx-auto">
+    <div class="flex flex-col min-h-screen max-w-3xl pt-6 mx-auto">
       <slot name="header">
         <PageNavbar />
       </slot>
