@@ -1,7 +1,8 @@
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from 'nuxt/config'
 import { IntlifyModuleOptions } from '@intlify/nuxt3'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 declare module '@nuxt/schema' {
   interface NuxtConfig {
@@ -31,9 +32,14 @@ export default defineNuxtConfig({
 
   // css
   css: ['~/assets/sass/vendor.scss', '~/assets/sass/app.scss'],
-
   // plugins
-  plugins: ['~/plugins/navbar.ts'],
+  plugins: [
+    '~/plugins/navbar.ts',
+    {
+      src: '~/plugins/grid.ts',
+      mode: 'client',
+    },
+  ],
 
   // build
   build: {
@@ -82,6 +88,7 @@ export default defineNuxtConfig({
           }),
         ],
       }),
+      nodePolyfills(),
     ],
   },
 

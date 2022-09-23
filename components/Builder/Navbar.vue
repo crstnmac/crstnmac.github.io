@@ -97,7 +97,7 @@ const toggleOptions = (show?: boolean) => {
             class="fixed lg:hidden bg-gray-100 dark:bg-slate-800 pt-16 top-0 left-0 w-screen h-screen z-30 flex flex-col"
           >
             <div class="flex-1 flex flex-col relative overflow-y-auto">
-              <slot name="drawer" :toggleDrawer="toggleDrawer" />
+              <slot name="drawer" :toggle-drawer="toggleDrawer" />
             </div>
           </div>
         </Transition>
@@ -106,8 +106,8 @@ const toggleOptions = (show?: boolean) => {
         <div v-if="showOptions && $slots['options']">
           <slot
             name="options"
-            :toggleOptions="toggleOptions"
-            :showOptions="showOptions"
+            :toggle-options="toggleOptions"
+            :show-options="showOptions"
           />
         </div>
       </Teleport>
@@ -119,9 +119,11 @@ const toggleOptions = (show?: boolean) => {
 .slide-fade-from-up-enter-active {
   transition: all 0.3s ease-out;
 }
+
 .slide-fade-from-up-leave-active {
   transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
 }
+
 .slide-fade-from-up-enter-from,
 .slide-fade-from-up-leave-to {
   transform: translateY(-20px);
@@ -131,9 +133,11 @@ const toggleOptions = (show?: boolean) => {
 a.router-link-active {
   font-weight: bold;
 }
+
 a.router-link-exact-active {
   color: theme('colors.slate.900');
 }
+
 html.dark {
   a.router-link-exact-active {
     color: theme('colors.white');

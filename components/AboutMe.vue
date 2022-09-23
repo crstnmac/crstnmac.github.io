@@ -1,16 +1,20 @@
 <template>
-  <div class="flex flex-col justify-center items-start mx-auto pb-8">
+  <div class="flex flex-col justify-center items-start mx-auto pb-8 mt-8">
     <div class="flex flex-col-reverse w-full sm:flex-row items-center">
       <div class="flex flex-col pr-8 ml-6">
-        <div class="text-4xl font-extrabold">Criston Mascarenhas</div>
-        <div class="text-sm">
-          Software Engineer at
+        <div
+          class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-purple-500 to-green-400 dark:from-yellow-300 dark:via-purple-400 dark:to-green-300"
+        >
+          Criston Mascarenhas
+        </div>
+        <div class="text-sm pl-1">
+          Frontend Developer at
           <Anchor
-            href="https://globallogic.com"
+            href="https://timeless.co"
             target="_blank"
-            class="hover:no-underline hover:text-slate-900 hover:dark:text-white capitalize"
-            >GlobalLogic</Anchor
-          >
+            class="font-bold hover:no-underline hover:text-slate-900 hover:dark:text-white capitalize"
+            >Timeless.co
+          </Anchor>
         </div>
         <div class="text-md mt-4 font-semibold italic text-gray-400">
           "Make it work, make it right, make it fast." - Kent Beck

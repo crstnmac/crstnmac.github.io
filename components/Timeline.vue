@@ -49,10 +49,10 @@
               :class="
                 ex.active
                   ? `border-violet-700	
-                                  border-dotted animate-[spin_15s_linear_infinite]`
+                                border-dotted animate-[spin_15s_linear_infinite]`
                   : ex.youtube
                   ? `border-red-700	
-                                  border-dotted animate-[spin_15s_linear_infinite]`
+                                border-dotted animate-[spin_15s_linear_infinite]`
                   : ``
               "
             ></div>
@@ -146,13 +146,24 @@ const elements = [
     emoji: 'boy-coding',
     info: [
       {
+        place: 'Work from home',
+        date: "Oct'22",
+        topic: 'Frontend Developer',
+        event: 'Timeless',
+        eventlink: 'https://timeless.co/',
+        description: 'Working as a Frontend Developer',
+        img: 'timeless',
+        active: 'Present',
+        imgAlt: 'Image',
+      },
+      {
         place: 'Bangalore,IN',
-        date: "March'21",
+        date: "March'21 - Sept'22",
         topic: 'Software Engineer',
         event: 'GlobalLogic',
         eventlink: 'https://globallogic.com',
-        description: 'Working as a Software Engineer.',
-        active: 'Present',
+        description:
+          'Migrated a large scale healthcare supplychain management product from AngularJS to Angular.',
         gif: 'globallogic',
       },
       {
@@ -162,7 +173,7 @@ const elements = [
         event: 'SlashRTC',
         eventlink: 'https://www.slashrtc.com/',
         description:
-          'Here I develped the dashboard for Dialogflow of a chatbot using ReactJS',
+          'Develped a dashboard for Dialogflow of a chatbot using ReactJS',
         img: 'slashrtc',
         imgAlt: 'Image',
       },
@@ -179,7 +190,7 @@ const elements = [
         event: 'Free Software Movement Karnataka',
         eventlink: 'https://fsmk.org',
         description:
-          'In this 1 week workshop I spoke about how you can make a web application using Vue,MongoDB and NodeJS',
+          'I spoke about how you can make a web application using Vue,MongoDB and NodeJS',
         img: 'fsmk2020',
         imgAlt: 'Image',
       },
@@ -208,7 +219,7 @@ const elements = [
           'From each job, class, co-worker, book, article, meet-up or life experience.',
         description:
           "This is how I learnt the 80% of what I know now and how I improve it. At the moment I'm learning ",
-        learnt: 'TypeScript,Angular & Spring Boot',
+        learnt: 'TypeScript, React & React Native',
         gif: 'selflearn',
         active: 'Always',
       },

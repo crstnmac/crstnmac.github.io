@@ -16,18 +16,18 @@ const menus = computed((): IMenuItem[] => [
   {
     type: 'button',
     text: t('pages.blog.nav'),
-    route: { name: 'blog' },
+    route: 'blog',
   },
-  {
-    type: 'button',
-    text: t('pages.snippets.nav'),
-    route: { name: 'snippets' },
-  },
-  {
-    type: 'button',
-    text: t('pages.projects.nav'),
-    route: { name: 'projects' },
-  },
+  // {
+  //   type: 'button',
+  //   text: t('pages.snippets.nav'),
+  //   route: 'snippets',
+  // },
+  // {
+  //   type: 'button',
+  //   text: t('pages.projects.nav'),
+  //   route: 'projects',
+  // },
 ])
 </script>
 
@@ -46,8 +46,8 @@ const menus = computed((): IMenuItem[] => [
                 :to="item.route ? item.route : undefined"
                 :href="item.href ? item.href : undefined"
                 class="hover:no-underline hover:text-slate-900 hover:dark:text-white capitalize"
-                >{{ item.text }}</Anchor
-              >
+                >{{ item.text }}
+              </Anchor>
               <Button
                 v-else-if="item.type === 'button'"
                 :text="item.text"
@@ -66,7 +66,8 @@ const menus = computed((): IMenuItem[] => [
         <ThemeSwitcher />
         <Anchor
           class="hover:no-underline hover:text-slate-900 hover:dark:text-white text-lg flex self-center items-center"
-          href="https://github.com/crstnmac/crstnmac.github.io"
+          href="https://github.com/crstnmac"
+          target="_blank"
           title="Github"
         >
           <IconMdi:github-face />
@@ -93,8 +94,8 @@ const menus = computed((): IMenuItem[] => [
                   :to="item.route ? item.route : undefined"
                   :href="item.href ? item.href : undefined"
                   class="flex-1 hover:no-underline capitalize"
-                  >{{ item.text }}</Anchor
-                >
+                  >{{ item.text }}
+                </Anchor>
                 <Button
                   v-else-if="item.type === 'button'"
                   :text="item.text"
