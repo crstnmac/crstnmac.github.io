@@ -11,9 +11,11 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     domains: [
+      "user-images.githubusercontent.com",
       "avatars.githubusercontent.com",
       "raw.githubusercontent.com",
       "lanyard.cnrad.dev",
+      "discord.com",
     ],
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },

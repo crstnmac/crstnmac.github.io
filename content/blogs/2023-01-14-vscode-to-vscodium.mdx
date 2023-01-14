@@ -11,7 +11,8 @@ tags:
 ---
 
 > VSCodium is a fork of Microsoft’s popular Visual Studio Code editor. It’s identical to VS Code with the single biggest difference that unlike VS Code, VSCodium doesn’t track your usage data.
-> I am writing this blog post in [VSCodium](https://github.com/VScodium). What? Is that like VSCode?
+
+I am writing this blog post in [VSCodium](https://github.com/VScodium). What? Is that like VSCode?
 
 Yes, it’s basically VSCode minus the corporate bullshit like surveillance and proprietary-licensed binaries.
 
@@ -49,8 +50,10 @@ On Debian-derived operating systems that have the apt package manager:
 # Authorise Paul Carroty’s repository.
 # (https://twitter.com/paulcarroty)
 wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
+
 # Add Paul’s custom apt repository to your apt sources list.
 echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list
+
 # Update your apt package list and install VSCodium.
 sudo apt update
 sudo apt install codium
@@ -63,10 +66,13 @@ On Linux:
 ```bash
 # Create the folder to host your extensions.
 mkdir -p ~/.vscode-oss/
+
 # Copy your extensions over from VSCode.
 cp -R ~/.vscode/extensions ~/.vscode-oss/
+
 # Create the folder to hold your settings.
 mkdir -p $HOME/.config/VSCodium/
+
 # Copy your settings over from VSCode.
 cp -R $HOME/.config/Code/User $HOME/.config/VSCodium/User/
 ```

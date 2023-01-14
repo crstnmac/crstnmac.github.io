@@ -1,8 +1,11 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { t } from "lib";
+import { Callout, CodeTitle, Pre } from "components";
 import React from "react";
 
 const components = {
+  Callout,
+  CodeTitle,
   a: ({ ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
     <a
       className="animated-underline border-b border-dotted border-dark hover:border-dark/0"
@@ -27,7 +30,7 @@ const components = {
     ...props
   }: React.BlockquoteHTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
-      className="mt-6 border-l-4 border-dark pl-6 italic text-dark [&>*]:text-zinc-600"
+      className="mt-6 border-l-4 border-dark pl-6 italic text-black-900 [&>*]:text-zinc-600"
       {...props}
     />
   ),
@@ -54,12 +57,13 @@ const components = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={t(
-        "relative rounded border bg-gray-300 bg-opacity-25 py-[0.2rem] px-[0.3rem] font-mono text-base text-gray-600",
+        "relative  bg-opacity-25 py-[0.2rem] px-[0.3rem] font-mono text-base text-gray-600",
         className
       )}
       {...props}
     />
   ),
+  pre: Pre,
 };
 
 interface IMDXComponents {

@@ -1,4 +1,4 @@
-import { BlogSection } from "components";
+import { BlogSection, Box, AboutMe } from "components";
 import { allBlogs } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 
@@ -8,5 +8,10 @@ export default function Home() {
     .sort((a, b) => {
       return compareDesc(new Date(a.date), new Date(b.date));
     });
-  return <BlogSection posts={posts} />;
+  return (
+    <Box as="section">
+      <AboutMe />
+      <BlogSection posts={posts} />
+    </Box>
+  );
 }

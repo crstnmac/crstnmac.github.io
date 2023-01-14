@@ -1,26 +1,42 @@
 import { navigation } from "config";
-import Link from "next/link";
+import { Box, Link } from "components";
 
-const nav = navigation.mainNav;
+const nav = navigation.footerNav;
 
 export default function Footer() {
   return (
-    <div className="flex w-full items-center justify-between py-6">
-      <div className="flex items-center">Criston</div>
-      <div className="hidden font-medium capitalize lg:inline-flex">
-        Fontend Developer
-      </div>
-      <div className="ml-10 space-x-8">
-        {nav.map((item, index) => (
+    <Box fullSize as="footer" className="mx-0">
+      <hr className="mt-12 border-dark" />
+      <Box
+        as="div"
+        className="flex flex-col py-6 sm:px-6 md:flex-row md:items-center md:justify-between"
+      >
+        {nav.length && (
+          <div className="flex justify-center space-x-6 md:order-2">
+            {nav.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                animatedUnderline
+                className="font-medium text-dark"
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
+        )}
+        <div className="mt-8 flex flex-col items-center justify-center font-medium md:order-1 md:mt-0 md:flex-row md:flex-nowrap md:justify-start">
+          <p className="ml-0 mt-4 md:mt-0 md:ml-2">&copy; 2023 &mdash; </p>
+          &nbsp;
+          <p>Design and development by </p>&nbsp;
           <Link
-            key={index}
-            href={item.href}
-            className="text-base font-medium tracking-wide text-dark"
+            href="https://github.com/crstnmac"
+            className="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-yellow-300 via-purple-400 to-green-300"
           >
-            {item.title}
+            crstnmac
           </Link>
-        ))}
-      </div>
-    </div>
+        </div>
+      </Box>
+    </Box>
   );
 }

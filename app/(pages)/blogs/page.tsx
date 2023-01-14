@@ -1,5 +1,5 @@
 "use client";
-import { BlogSection } from "components";
+import { BlogSection, Box, AboutMe } from "components";
 import { allBlogs } from "contentlayer/generated";
 import { compareDesc as compare } from "date-fns";
 
@@ -10,5 +10,12 @@ export default function BlogIndexPage() {
       return compare(new Date(a.date), new Date(b.date));
     });
 
-  return <BlogSection posts={posts} />;
+  return (
+    <Box as="section" className="h-full flex flex-col justify-between">
+      <BlogSection posts={posts} />
+      <Box fullSize className="mt-auto mb-0 mx-0">
+        <AboutMe />
+      </Box>
+    </Box>
+  );
 }

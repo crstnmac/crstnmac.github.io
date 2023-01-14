@@ -1,10 +1,10 @@
 [data-rehype-pretty-code-fragment] code {
-  @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0 text-sm text-dark;
+  @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0 text-sm text-black-900;
   counter-reset: line;
   box-decoration-break: clone;
 }
 [data-rehype-pretty-code-fragment] .line {
-  @apply w-fit rounded bg-slate-900 py-[0.2rem] px-[0.3rem] text-base;
+  @apply w-fit rounded bg-black-900 py-[0.2rem] px-[0.3rem] text-base;
 }
 p > [data-rehype-pretty-code-fragment] {
   @apply inline-block;
