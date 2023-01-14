@@ -1,5 +1,7 @@
 import "./globals.css";
+import React from "react";
 import { Inter } from "@next/font/google";
+import { t } from "lib";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -9,11 +11,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.className}`}>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang="en" className={(t("antialiased"), inter.className)}>
       <head />
       <body>{children}</body>
     </html>
