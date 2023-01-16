@@ -11,3 +11,5 @@ export { default as Box } from "./box";
 export { default as Link } from "./link";
 export { default as Picture } from "./image";
 export { default as AboutMe } from "./about-me";
+export { default as H1Title } from "./title";
+export { default as BlogHeader } from "./blog-header";

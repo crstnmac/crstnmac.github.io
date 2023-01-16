@@ -14,7 +14,10 @@ const components = {
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
-      className={t("text-xl leading-7 [&:not(:first-child)]:mt-6", className)}
+      className={t(
+        "text-xl leading-7 [&:not(:first-child)]:mt-6 dark:text-black-200",
+        className
+      )}
       {...props}
     />
   ),
@@ -30,7 +33,7 @@ const components = {
     ...props
   }: React.BlockquoteHTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
-      className="mt-6 border-l-4 border-dark pl-6 italic text-black-900 [&>*]:text-zinc-600"
+      className="mt-6 border-l-4 border-dark pl-6 italic text-black-900 dark:text-black-200 [&>*]:text-zinc-600"
       {...props}
     />
   ),
@@ -57,13 +60,16 @@ const components = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={t(
-        "relative  bg-opacity-25 py-[0.2rem] px-[0.3rem] font-mono text-base text-gray-600",
+        "relative  bg-opacity-25 py-[0.2rem] px-[0.3rem] font-mono text-base text-gray-600 dark:text-black-200",
         className
       )}
       {...props}
     />
   ),
   pre: Pre,
+  h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
+    <h2 className={t("dark:text-black-200", className)} {...props} />
+  ),
 };
 
 interface IMDXComponents {

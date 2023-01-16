@@ -7,18 +7,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./content/**/*.{md,mdx}",
   ],
-  safelist: ["dark"],
-  darkMode: "class",
   theme: {
     typography: (theme) => ({}),
     extend: {
-      typography: (theme) => ({
-        dark: {
-          css: {
-            color: "white",
-          },
-        },
-      }),
       colors: {
         black: {
           50: "#f7f7f7",
@@ -66,9 +57,6 @@ module.exports = {
       1500: "1500ms",
       2000: "2000ms",
       2500: "2500ms",
-    },
-    variants: {
-      typography: ["dark"],
     },
   },
   plugins: [

@@ -18,7 +18,7 @@ export default function Box({
     <Container
       className={t(
         "mx-auto px-4",
-        fullSize ? "max-w-full px-0" : "max-w-6xl",
+        fullSize ? "max-w-full px-0" : "max-w-4xl",
         className
       )}
     >

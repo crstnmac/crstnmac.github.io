@@ -8,7 +8,7 @@ export default function Header() {
     <Box
       as="header"
       fullSize
-      className="border-b border-dark animate-in slide-in-from-top duration-500 lg:border-none mx-0"
+      className="border-b border-dark animate-in slide-in-from-top duration-500 lg:border-none mx-0 "
     >
       <Box as="nav" aria-label="Top">
         <div className="flex w-full items-center justify-between py-6">
@@ -21,7 +21,7 @@ export default function Header() {
             </Link>
           </div>
           <div className="hidden font-medium capitalize lg:inline-flex">
-            <p>Frontend Developer</p>
+            <p className="dark:text-black-200">Frontend Developer</p>
           </div>
           <div className="ml-10 space-x-8">
             {nav.map((item, index) => (
@@ -29,7 +29,7 @@ export default function Header() {
                 key={index}
                 href={item.href}
                 animatedUnderline
-                className="text-base font-medium tracking-wide text-dark"
+                className="text-base font-medium tracking-wide dark:text-black-200"
               >
                 {item.title}
               </Link>

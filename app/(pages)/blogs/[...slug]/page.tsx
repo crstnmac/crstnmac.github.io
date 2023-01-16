@@ -1,10 +1,9 @@
 import "./mdx.css";
 
 import { allBlogs } from ".contentlayer/generated";
-import { MDXComponents, Picture } from "components";
+import { MDXComponents, Box, BlogHeader } from "components";
 import { notFound } from "next/navigation";
-import { Martian_Mono } from "@next/font/google";
-import { shimmer, toBase64 } from "lib";
+import { formatDate } from "lib";
 interface ISingleBlogPost {
   params: {
     slug: string[];
@@ -27,23 +26,17 @@ export default function SingleBlogPost({ params }: ISingleBlogPost) {
     notFound();
   }
   return (
-    <div>
+    <Box as="section">
       <article>
-        <div> {post.title}</div>
-        <Picture
-          src={post.cover_image}
-          width={1200}
-          height={630}
-          className="my-8 h-[280px] w-full rounded-md border border-gray-300 object-cover object-center animate-in fade-in duration-500 md:h-[500px]"
-          placeholder="blur"
-          blurDataURL={`data:image/svg+xml;base64,${toBase64(
-            shimmer(1200, 630)
-          )}`}
-          priority
-          alt={post.title}
+        <BlogHeader
+          date={formatDate(post.date)}
+          title={post.title}
+          imgSrc={post.cover_image}
+          imgAlt={post.cover_image}
+          readingTime={post.readingTime.text}
         />
         <MDXComponents code={post.body.code} />
       </article>
-    </div>
+    </Box>
   );
 }

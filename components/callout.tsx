@@ -14,7 +14,9 @@ export default function Callout({ className, children, ...props }: ICallout) {
       )}
       {...props}
     >
-      <div className={t("m-0 text-md", className)}>{children}</div>
+      <div className={t("m-0 text-md dark:text-black-200", className)}>
+        {children}
+      </div>
     </div>
   );
 }

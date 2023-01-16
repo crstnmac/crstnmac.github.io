@@ -3,7 +3,6 @@ import "./globals.css";
 import React from "react";
 import { Inter } from "@next/font/google";
 import { t } from "lib";
-import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 
@@ -15,8 +14,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={t("antialiased", inter.variable)}>
       <head />
-      <body className="min-h-screen text-dark">
-        <ThemeProvider attribute="class">{children} </ThemeProvider>
+      <body className="min-h-screen dark:bg-black-900 bg-white">
+        {children}
       </body>
     </html>
   );
