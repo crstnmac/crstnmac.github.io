@@ -8,7 +8,7 @@ export default function WebLayout({ children }: IWebLayout) {
   return (
     <Box fullSize className="flex flex-col h-screen justify-between">
       <Header />
-      <main className="flex-1 mx-8 py-3">{children}</main>
+      <main className="flex-1 md:mx-8 py-3">{children}</main>
       <Footer />
     </Box>
   );
