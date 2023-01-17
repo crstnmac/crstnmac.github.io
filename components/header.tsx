@@ -1,6 +1,6 @@
+"use client";
 import { navigation } from "config";
-import { Link, Box } from "components";
-
+import { Link, Box, DarkIcon } from "components";
 const nav = navigation.mainNav;
 
 export default function Header() {
@@ -23,7 +23,7 @@ export default function Header() {
           <div className="hidden font-medium capitalize lg:inline-flex">
             <p className="dark:text-black-200">Frontend Developer</p>
           </div>
-          <div className="ml-10 space-x-8">
+          <div className="ml-10 space-x-8 flex items-center">
             {nav.map((item, index) => (
               <Link
                 key={index}
@@ -34,6 +34,7 @@ export default function Header() {
                 {item.title}
               </Link>
             ))}
+            <DarkIcon />
           </div>
         </div>
       </Box>

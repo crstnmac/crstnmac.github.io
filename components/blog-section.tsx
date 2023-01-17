@@ -6,7 +6,7 @@ export default function BlogSection({ posts }: { posts: Blog[] }) {
   return (
     <Box as="section" className="animate-in fade-in duration-500 mx-0" fullSize>
       {posts.length > 1 ? (
-        <span className="font-mono text-sm font-semibold lowercase text-gray-500">
+        <span className="font-mono text-sm font-semibold lowercase">
           scroll &rarr;
         </span>
       ) : undefined}
@@ -16,7 +16,7 @@ export default function BlogSection({ posts }: { posts: Blog[] }) {
             {posts.map((b) => (
               <div
                 key={b._id}
-                className="group p-2 w-full bg-white dark:bg-black-800 sm:w-[330px] flex-none rounded-2xl"
+                className="group p-2 w-full sm:w-[330px] flex-none rounded-2xl"
               >
                 <Link
                   href={`/blogs/${b.slugAsParams}`}
@@ -39,15 +39,15 @@ export default function BlogSection({ posts }: { posts: Blog[] }) {
 
                   <div className="flex flex-col items-start justify-between b-4">
                     <div className="flex flex-col">
-                      <span className="text-sm italic dark:text-black-200">
+                      <span className="text-sm italic">
                         {formatDate(b.date)}
                       </span>
-                      <h2 className="h3 mt-1 inline font-bold leading-8 dark:text-black-200">
+                      <h2 className="h3 mt-1 inline font-bold leading-8">
                         {b.title}
                       </h2>
                     </div>
                     <div className="flex flex-col items-start justify-start">
-                      <b className="text-sm lowercase text-gray-500 dark:text-black-200">
+                      <b className="text-sm lowercase text-gray-500">
                         {b.readingTime.text}
                       </b>
                       {b.tags?.length ? (
@@ -55,7 +55,7 @@ export default function BlogSection({ posts }: { posts: Blog[] }) {
                           {b.tags.map((t, index) => (
                             <span
                               key={index}
-                              className="inline-flex text-xs font-normal uppercase tracking-wider before:content-['#'] after:ml-1 after:content-['•'] last:after:content-none dark:text-black-200"
+                              className="inline-flex text-xs font-normal uppercase tracking-wider before:content-['#'] after:ml-1 after:content-['•'] last:after:content-none"
                             >
                               {t}
                             </span>

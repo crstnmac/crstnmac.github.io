@@ -13,3 +13,8 @@ export { default as Picture } from "./image";
 export { default as AboutMe } from "./about-me";
 export { default as H1Title } from "./title";
 export { default as BlogHeader } from "./blog-header";
+export { default as MoonIcon } from "./icons/moon";
+export { default as SunIcon } from "./icons/sun";
+export { default as DarkIcon } from "./dark-mode";
+export { default as Button } from "./button";
+export { default as Providers } from "./providers";
