@@ -2,7 +2,6 @@
 import { navigation } from "config";
 import { Link, Box } from "components";
 import dynamic from "next/dynamic";
-import { t } from "lib";
 const nav = navigation.mainNav;
 
 const DarkIcon = dynamic(() => import("components/dark-mode"), { ssr: false });
@@ -12,7 +11,7 @@ export default function Header() {
     <Box
       as="header"
       fullSize
-      className="border-b border-dark animate-in slide-in-from-top duration-500 lg:border-none mx-0 "
+      className="border-b border-dark animate-in slide-in-from-top duration-500 lg:border-none mx-0"
     >
       <Box as="nav" aria-label="Top">
         <div className="flex w-full items-center justify-between py-6">
