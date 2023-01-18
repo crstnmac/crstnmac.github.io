@@ -41,7 +41,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Inter", ...fontFamily.sans],
-      mono: ["Inter", ...fontFamily.mono],
+      mono: ["Fira\\ Code", ...fontFamily.mono],
     },
     keyframes: {
       jelly: {
