@@ -32,12 +32,14 @@ export default function Footer() {
           &nbsp;
           <p className="dark:text-black-200">Design and development by </p>
           &nbsp;
-          <Link
-            href="https://github.com/crstnmac"
-            className="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-yellow-300 via-purple-400 to-green-300"
-          >
-            crstnmac
-          </Link>
+          <div className="hover:animate-jelly">
+            <Link
+              href="https://github.com/crstnmac"
+              className="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-yellow-300 via-purple-400 to-green-300 "
+            >
+              crstnmac
+            </Link>
+          </div>
         </div>
       </Box>
     </Box>
