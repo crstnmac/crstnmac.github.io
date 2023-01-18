@@ -6,6 +6,8 @@
   html {
     scroll-behavior: smooth;
     @apply h-full selection:bg-brand-400 selection:text-black-900;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   .h0 {
     @apply text-4xl font-bold tracking-wide md:text-6xl;

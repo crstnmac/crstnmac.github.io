@@ -2,6 +2,7 @@
 import { navigation } from "config";
 import { Link, Box } from "components";
 import dynamic from "next/dynamic";
+import { t } from "lib";
 const nav = navigation.mainNav;
 
 const DarkIcon = dynamic(() => import("components/dark-mode"), { ssr: false });
@@ -23,16 +24,13 @@ export default function Header() {
               crstnmac
             </Link>
           </div>
-          <div className="hidden font-medium capitalize lg:inline-flex">
-            <p className="dark:text-black-200">Frontend Developer</p>
-          </div>
           <div className="ml-10 space-x-8 flex items-center">
             {nav.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
                 animatedUnderline
-                className="text-base font-medium tracking-wide dark:text-black-200"
+                className="text-base font-medium tracking-wide"
               >
                 {item.title}
               </Link>
