@@ -1,7 +1,10 @@
 "use client";
 import { navigation } from "config";
-import { Link, Box, DarkIcon } from "components";
+import { Link, Box } from "components";
+import dynamic from "next/dynamic";
 const nav = navigation.mainNav;
+
+const DarkIcon = dynamic(() => import("components/dark-mode"), { ssr: false });
 
 export default function Header() {
   return (
@@ -12,10 +15,10 @@ export default function Header() {
     >
       <Box as="nav" aria-label="Top">
         <div className="flex w-full items-center justify-between py-6">
-          <div className="flex items-center">
+          <div className="flex items-center hover:animate-jelly">
             <Link
               href="/"
-              className="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-yellow-300 via-purple-400 to-green-300"
+              className="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-yellow-300 via-purple-400 to-green-300 animate-jelly flex flex-row flex-nowrap items-center justify-start"
             >
               crstnmac
             </Link>
