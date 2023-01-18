@@ -5,7 +5,7 @@ export default function InfoHead() {
     <PageMeta
       title="Criston Mascarenhas is a Frontend Developer."
       description="Learn more about me, Criston Mascarenhas, and my love for all things technological."
-      slug="/about"
+      slug="/snippets"
     />
   );
 }

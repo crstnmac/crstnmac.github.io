@@ -71,11 +71,36 @@ export const Blog = defineDocumentType(() => ({
   computedFields,
 }));
 
+export const Snippet = defineDocumentType(() => ({
+  name: "Snippet",
+  filePathPattern: `snippets/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+      required: true,
+    },
+    date: {
+      type: "date",
+      required: true,
+    },
+    published: {
+      type: "boolean",
+      default: true,
+    },
+  },
+  computedFields,
+}));
+
 const themePath = "./assets/themes/markdown-theme.json";
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Blog],
+  documentTypes: [Blog, Snippet],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
