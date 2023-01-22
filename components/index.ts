@@ -18,4 +18,5 @@ export { default as SunIcon } from "./icons/sun";
 export { default as DarkIcon } from "./dark-mode";
 export { default as Button } from "./button";
 export { default as Providers } from "./providers";
-export {default as SnippetSection} from './snippet-section';
+export { default as SnippetSection } from "./snippet-section";
+export { default as ExperienceSection } from "./experience-section";

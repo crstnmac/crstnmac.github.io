@@ -12,7 +12,7 @@ const Background = (props: SVGProps<SVGElement> & { gap?: number }) => {
 
   return (
     <svg
-      className={t("w-full h-full absolute fixed", className)}
+      className={t("w-full h-full", className)}
       width={"100%"}
       height={"100%"}
     >

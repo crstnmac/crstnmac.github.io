@@ -2,6 +2,12 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import { t } from "lib";
 import { Callout, CodeTitle, Pre } from "components";
 import React from "react";
+import { Fira_Code } from "@next/font/google";
+
+const fira = Fira_Code({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const components = {
   Callout,
@@ -61,7 +67,8 @@ const components = {
     <code
       className={t(
         "relative  bg-opacity-25 py-[0.2rem] px-[0.3rem] font-mono text-base text-gray-600 dark:text-black-200",
-        className
+        className,
+        fira.className
       )}
       {...props}
     />

@@ -16,5 +16,6 @@ export const navigation: TNavItems = {
     { title: "LinkedIn", href: "https://linkedin.com/in/devcriston" },
     { title: "Github", href: "https://github.com/crstnmac" },
     { title: "Email", href: "mailto:criston2011@gmail.com" },
+    { title: "About", href: "/about" },
   ],
 };

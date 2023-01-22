@@ -4,7 +4,11 @@ import { Box, Picture, Link } from "components";
 
 export default function BlogSection({ posts }: { posts: Blog[] }) {
   return (
-    <Box as="section" className="animate-in fade-in duration-500 mx-0" fullSize>
+    <Box
+      as="section"
+      className="group animate-in fade-in duration-500 mx-0"
+      fullSize
+    >
       {posts.length > 1 ? (
         <span className="font-mono text-sm font-semibold lowercase">
           scroll &rarr;
@@ -16,7 +20,7 @@ export default function BlogSection({ posts }: { posts: Blog[] }) {
             {posts.map((b) => (
               <div
                 key={b._id}
-                className="group p-2 w-full sm:w-[330px] flex-none rounded-2xl  bg-gray-100 hover:bg-gray-200 dark:bg-black-900 hover:dark:bg-black-800 transition duration-700 ease-in-out"
+                className="group p-2 w-full sm:w-[330px] flex-none rounded-2xl bg-brand-100 hover:bg-brand-200 dark:bg-brand-900 hover:dark:bg-brand-800 transition duration-700 ease-in-out"
               >
                 <Link
                   href={`/blogs/${b.slugAsParams}`}
@@ -42,7 +46,7 @@ export default function BlogSection({ posts }: { posts: Blog[] }) {
                       <span className="text-sm italic">
                         {formatDate(b.date)}
                       </span>
-                      <h2 className="h3 mt-1 inline font-bold leading-8">
+                      <h2 className="h3 mt-1 inline font-bold leading-8 dark:group-hover:text-black-50 dark:text-black-300 text-slate-700 group-hover:text-slate-900 transition duration-700 ease-in-out">
                         {b.title}
                       </h2>
                     </div>

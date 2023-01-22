@@ -82,7 +82,7 @@ export default function Pre({ className, ...props }: IPre) {
       </button>
       <pre
         className={t(
-          "pre mt-4 mb-4 overflow-x-auto rounded-lg bg-black-900 px-3 py-4 font-mono",
+          "pre mt-4 mb-4 overflow-x-auto rounded-2xl bg-black-900 px-3 py-4 font-mono",
           className
         )}
         {...props}

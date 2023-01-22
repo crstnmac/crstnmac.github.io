@@ -1,20 +1,17 @@
 "use client";
 import "./globals.css";
 import React from "react";
-import { Fira_Code, Inter } from "@next/font/google";
+import { Inter } from "@next/font/google";
 import { t } from "lib";
 import dynamic from "next/dynamic";
+import Background from "components/background";
 const Providers = dynamic(() => import("components/providers"), { ssr: false });
 
+import { useTheme } from "next-themes";
+
 const inter = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
-});
-
-const fira = Fira_Code({
-  variable: "--font-fira",
-  subsets: ["latin"],
 });
 
 export default function RootLayout({
@@ -22,13 +19,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const { resolvedTheme } = useTheme();
+
   return (
     <html lang="en">
       <head />
       <body
-        className={t("antialiased min-h-screen", inter.variable, fira.variable)}
+        className={t(
+          "group antialiased min-h-screen dark:bg-brand-900 bg-brand-50 transition-colors duration-1000 ease-in-out",
+          inter.className
+        )}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <Background
+            className="top-0 -z-50 opacity-5 fill fixed"
+            gap={20}
+            color={resolvedTheme === "dark" ? "#c9d5ce" : "#224d36"}
+          />
+          {children}
+        </Providers>
       </body>
     </html>
   );

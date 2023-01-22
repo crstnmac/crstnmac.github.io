@@ -1,4 +1,4 @@
-import { BlogSection, Box, AboutMe } from "components";
+import { BlogSection, Box, AboutMe, ExperienceSection } from "components";
 import { allBlogs } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 

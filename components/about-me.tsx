@@ -1,4 +1,4 @@
-import { Box, Link, Picture } from "components";
+import { Link, Picture } from "components";
 
 export default function AboutMe() {
   return (
@@ -8,13 +8,12 @@ export default function AboutMe() {
           <div className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-purple-500 to-green-400 dark:from-yellow-300 dark:via-purple-400 dark:to-green-300">
             Criston Mascarenhas
           </div>
-          <div className="text-sm pl-1 dark:text-black-200">
+          <div className="text-sm font-medium pl-1 dark:text-black-200">
             Frontend Developer at{" "}
             <Link
               href="https://timeless.co"
               className="font-bold dark:text-black-200
-              hover:text-slate-900 hover:dark:text-black-200 capitalize transition duration-700 ease-in-out"
-              animatedUnderline
+              hover:text-slate-900 hover:dark:text-black-100 capitalize transition duration-700 ease-in-out"
             >
               Timeless.co
             </Link>

@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    box-sizing: border-box;
+  }
+
   html {
     scroll-behavior: smooth;
     @apply h-full selection:bg-brand-400 selection:text-black-900;
@@ -36,7 +40,7 @@
 @layer utilities {
   .animated-underline {
     background-image: linear-gradient(#0a0a0a00, #ffffff00),
-      linear-gradient(to right, #ffffff, #0c0c0c);
+      linear-gradient(to right, #ffffff, #224d36);
     background-size: 100% 2px, 0 2px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
@@ -58,6 +62,188 @@
   }
   .blog-scale:hover {
     transform: scale(1.1);
+  }
+
+  .experience {
+    position: relative;
+    padding: 0;
+  }
+
+  .experience__content {
+    vertical-align: middle;
+    list-style: none;
+    position: relative;
+  }
+  .experience__content:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 14rem;
+    left: 21%;
+    width: 2px;
+    display: block;
+    margin-left: -1.5px;
+    display: none;
+    background-color: #e4e4e4;
+  }
+  .experience__content > li {
+    position: relative;
+    margin-bottom: 1rem;
+    min-height: 5rem;
+  }
+  .experience__content > li:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  .experience__content > li:before {
+    content: " ";
+    display: table;
+  }
+
+  .experience__time-place {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .experience__time {
+    display: inline-block;
+  }
+  .experience__time .active {
+    color: #0051ff;
+  }
+
+  .experience__panel {
+    position: relative;
+    padding: 0;
+    margin-top: -5.5rem;
+    text-align: left;
+  }
+
+  .experience__image {
+    position: relative;
+    display: block;
+    width: 16.66667%;
+    height: 16.66667%;
+    line-height: 0;
+  }
+  .experience__image:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    height: calc(100% + 6px);
+    border-radius: 100%;
+    background: rgb(255, 255, 255);
+    border: 2px solid #e4e4e4;
+    width: calc(100% + 6px);
+  }
+
+  .experience__image-video-logo {
+    right: 0;
+    z-index: 10;
+    position: absolute;
+    top: -8px;
+    height: 26px;
+  }
+
+  .experience__item--active .experience__image:after {
+    border-color: #6c5cff;
+  }
+
+  .experience__item--video .experience__image:after {
+    border-color: red;
+  }
+  .experience__item--video .experience__image:hover:after {
+    border-style: dashed;
+    -webkit-animation: stroke-draw 6s linear infinite;
+    animation: stroke-draw 6s linear infinite;
+  }
+
+  .experience__place {
+    color: #f0f6fc;
+    display: inline-block;
+  }
+
+  .experience__position {
+    color: #030303;
+    padding: 0.3rem 0 0 22%;
+    min-height: 5rem;
+  }
+
+  .experience__studies {
+    color: #030303;
+    padding: 0.3rem 0 0 22%;
+    min-height: 5rem;
+  }
+
+  .experience__title {
+    font-size: medium;
+    color: #f0f6fc;
+  }
+
+  .experience__description {
+    margin-top: 2rem;
+  }
+
+  .experience__learnt {
+    color: #f0f6fc;
+  }
+
+  @media (min-width: 768px) {
+    .experience__item {
+      display: -webkit-box;
+      display: flex;
+    }
+    .experience__content:before {
+      display: inline;
+      display: initial;
+    }
+    .experience__content > li {
+      margin-bottom: 5rem;
+    }
+    .experience__time-place {
+      margin-bottom: 0;
+      display: block;
+      width: 16.66667%;
+    }
+    .experience__panel {
+      padding: 0 0 0 2.7rem;
+      margin-top: 0;
+      width: 75%;
+    }
+    .experience__image {
+      height: 8.33333%;
+      width: 8.33333%;
+    }
+    .experience__description {
+      margin-top: 0;
+    }
+    .experience__place {
+      display: block;
+    }
+    .experience__time {
+      display: block;
+    }
+    .experience__position {
+      padding: 0;
+      min-height: 0;
+    }
+    .experience__studies {
+      padding: 0;
+      min-height: 0;
+    }
+  }
+  @media (min-width: 992px) {
+    .experience__content:before {
+      bottom: 7rem;
+    }
   }
 }
 

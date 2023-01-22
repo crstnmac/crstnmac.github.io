@@ -6,7 +6,7 @@ const nav = navigation.footerNav;
 export default function Footer() {
   return (
     <Box fullSize as="footer" className="mx-0">
-      <hr className="mt-0 border-dark" />
+      {/* <hr className="mt-0 border-dark" /> */}
       <Box
         as="div"
         className="flex flex-col py-6 sm:px-6 lg:px-2 md:flex-row md:items-center md:justify-between"
