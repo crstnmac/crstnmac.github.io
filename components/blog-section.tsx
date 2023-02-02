@@ -20,7 +20,7 @@ export default function BlogSection({ posts }: { posts: Blog[] }) {
             {posts.map((b) => (
               <div
                 key={b._id}
-                className="group p-2 w-full sm:w-[330px] flex-none rounded-2xl bg-brand-100 hover:bg-brand-200 dark:bg-brand-900 hover:dark:bg-brand-800 transition duration-700 ease-in-out"
+                className="group p-2 w-full sm:w-[330px] flex-none rounded-2xl bg-black-200 dark:bg-black-800 transition duration-700 ease-in-out"
               >
                 <Link
                   href={`/blogs/${b.slugAsParams}`}

@@ -3,7 +3,6 @@ import {
   defineDocumentType,
   makeSource,
 } from "contentlayer/source-files";
-import { readFileSync } from "fs";
 import readingTime from "reading-time";
 import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -12,7 +11,10 @@ import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
 const computedFields: ComputedFields = {
-  readingTime: { type: "json", resolve: (doc) => readingTime(doc.body.raw) },
+  readingTime: {
+    type: "json",
+    resolve: (doc) => readingTime(doc.body.raw)
+  },
   slug: {
     type: "string",
     resolve: (doc) =>

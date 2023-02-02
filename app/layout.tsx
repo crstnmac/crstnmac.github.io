@@ -26,7 +26,7 @@ export default function RootLayout({
       <head />
       <body
         className={t(
-          "group antialiased min-h-screen dark:bg-brand-900 bg-brand-50 transition-colors duration-1000 ease-in-out",
+          "group antialiased min-h-screen dark:bg-black-900 bg-brand-50 transition-colors duration-1000 ease-in-out",
           inter.className
         )}
       >
