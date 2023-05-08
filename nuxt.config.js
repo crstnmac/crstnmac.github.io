@@ -42,7 +42,7 @@ module.exports = {
         content: builtAt,
       },
       {
-        property: "google-site-verification",
+        name: "google-site-verification",
         content: "RIIKLI5xvbcXCzC98lcgLO4kWttNZoJhcSdVcSFvdEE",
       },
     ],
