@@ -7,6 +7,10 @@
             name="p:domain_verify"
             content="4668560dd94b9d4a8a95c5dd564d2450"
           />
+          <meta
+            name="google-site-verification"
+            content="RIIKLI5xvbcXCzC98lcgLO4kWttNZoJhcSdVcSFvdEE"
+          />
           <h2 class="hero_title">Criston Mascarenhas</h2>
           <h3>Software Engineer</h3>
           <p>and a dog lover.</p>
