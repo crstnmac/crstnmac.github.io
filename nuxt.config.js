@@ -9,6 +9,10 @@ module.exports = {
     title: "Criston Mascarenhas | Front-end Developer",
     meta: [
       {
+        name: "google-site-verification",
+        content: "RIIKLI5xvbcXCzC98lcgLO4kWttNZoJhcSdVcSFvdEE",
+      },
+      {
         charset: "utf-8",
       },
       {
@@ -40,10 +44,6 @@ module.exports = {
       {
         property: "og:updated_time",
         content: builtAt,
-      },
-      {
-        name: "google-site-verification",
-        content: "RIIKLI5xvbcXCzC98lcgLO4kWttNZoJhcSdVcSFvdEE",
       },
     ],
     link: [
