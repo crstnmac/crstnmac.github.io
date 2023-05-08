@@ -1,13 +1,13 @@
-import { useMDXComponent } from "next-contentlayer/hooks";
-import { t } from "lib";
-import { Callout, CodeTitle, Pre } from "components";
-import React from "react";
-import { Fira_Code } from "@next/font/google";
+import { Callout, CodeTitle, Pre } from 'components'
+import { t } from 'lib'
+import { useMDXComponent } from 'next-contentlayer/hooks'
+import { Fira_Code } from 'next/font/google'
+import React from 'react'
 
 const fira = Fira_Code({
-  subsets: ["latin"],
-  display: "swap",
-});
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 const components = {
   Callout,
@@ -21,7 +21,7 @@ const components = {
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
       className={t(
-        "text-xl leading-7 [&:not(:first-child)]:mt-6 dark:text-black-200",
+        'text-xl leading-7 [&:not(:first-child)]:mt-6 dark:text-black-200',
         className
       )}
       {...props}
@@ -66,7 +66,7 @@ const components = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={t(
-        "relative  bg-opacity-25 py-[0.2rem] px-[0.3rem] font-mono text-base text-gray-600 dark:text-black-200",
+        'relative  bg-opacity-25 py-[0.2rem] px-[0.3rem] font-mono text-base text-gray-600 dark:text-black-200',
         className,
         fira.className
       )}
@@ -75,14 +75,14 @@ const components = {
   ),
   pre: Pre,
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h2 className={t("dark:text-black-200", className)} {...props} />
+    <h2 className={t('dark:text-black-200', className)} {...props} />
   ),
-};
+}
 
 interface IMDXComponents {
-  code: string;
+  code: string
 }
 export function MDXComponents({ code }: IMDXComponents) {
-  const Component = useMDXComponent(code);
-  return <Component components={components} />;
+  const Component = useMDXComponent(code)
+  return <Component components={components} />
 }
