@@ -41,6 +41,10 @@ module.exports = {
         property: 'og:updated_time',
         content: builtAt,
       },
+      {
+        name="google-site-verification"
+        content="RIIKLI5xvbcXCzC98lcgLO4kWttNZoJhcSdVcSFvdEE"
+      }
     ],
     link: [
       {
