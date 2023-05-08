@@ -37,7 +37,7 @@
     "@nuxtjs/color-mode": "^2.0.2",
     "@nuxtjs/svg": "^0.1.12",
     "frontmatter-markdown-loader": "^3.6.2",
-    "node-sass": "^5.0.0",
+    "node-sass": "^8.0.0",
     "push-dir": "^0.4.1",
     "responsive-loader": "^2.2.1",
     "sass-loader": "^10.1.0",
