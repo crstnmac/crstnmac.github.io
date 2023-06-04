@@ -1,18 +1,49 @@
 "use client";
-import { BlogSection, Box, AboutMe } from "components";
-import { allBlogs } from "contentlayer/generated";
-import { compareDesc as compare } from "date-fns";
+import { Box, AboutMe, Link } from "components";
+import { useCallback, useEffect, useState } from "react";
 
-export default function BlogIndexPage() {
-  const posts = allBlogs
-    .filter((post) => post.published)
-    .sort((a, b) => {
-      return compare(new Date(a.date), new Date(b.date));
-    });
+async function getMediumBlogData() {
+  const res = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@devcriston');
+
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data');
+  }
+
+  return res.json();
+}
+
+
+export default async function BlogIndexPage() {
+
+  const [posts, setPosts] = useState<{ items: any }>({ items: [] })
+
+  const mediumPosts = useCallback(async () => {
+    const data = await getMediumBlogData()
+    setPosts(data)
+  }, [])
+
+  useEffect(() => {
+    mediumPosts()
+  }, [mediumPosts])
+
 
   return (
     <Box as="section" className="h-full flex flex-col justify-between">
-      <BlogSection posts={posts} />
+      {/* <BlogSection posts={posts} /> */}
+      {
+        posts && posts.items && posts.items.map((post: any, index: number) => {
+          return (
+            <ol key={index}>
+              <li>
+                <Link href={post.link} animatedUnderline>
+                  {post.title}
+                </Link>
+              </li>
+            </ol>
+          )
+        })
+      }
       <Box fullSize className="mt-auto mb-0 mx-0">
         <AboutMe />
       </Box>

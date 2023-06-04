@@ -111,7 +111,7 @@ export default makeSource({
       [
         rehypePrettyCode,
         {
-          theme: "material-darker",
+          theme: "material-theme-darker",
           // theme: JSON.parse(readFileSync(themePath, "utf-8")),
           onVisitLine(node: any) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty

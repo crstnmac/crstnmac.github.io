@@ -22,7 +22,7 @@ export default function BlogSection({ posts }: { posts: Blog[] }) {
                 key={b._id}
                 className="relative group p-2 w-full sm:w-[330px] flex-none rounded-2xl bg-black-200 dark:bg-black-800 transition duration-700 ease-in-out overflow-hidden"
               >
-                <div className="hover:background-noisy pointer-events-none absolute inset-0 z-10 rounded-xl md:rounded-2xl lg:rounded-3xl"></div>
+                <div className="background-noisy pointer-events-none absolute inset-0 z-10 rounded-xl md:rounded-2xl lg:rounded-3xl"></div>
                 <Link
                   href={`/blogs/${b.slugAsParams}`}
                   className=" group flex flex-col "

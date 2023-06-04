@@ -1,15 +1,14 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    "./content/**/*.{md,mdx}",
   ],
   darkMode: "class",
   theme: {
-    typography: (theme) => ({}),
+    typography: () => ({}),
     extend: {
       colors: {
         black: {
@@ -40,8 +39,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Inter", ...fontFamily.sans],
-      mono: ["Fira\\ Code", ...fontFamily.mono],
+      sans: ['var(--font-inter)'],
+      mono: ['var(--font-fira-code)'],
     },
     keyframes: {
       jelly: {

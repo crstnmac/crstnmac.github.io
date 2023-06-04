@@ -18,6 +18,9 @@ export default function AboutMe() {
               Timeless.co
             </Link>
           </div>
+          <div className="text-sm font-medium pl-1 dark:text-black-200">
+            Working mostly on React, Next.js, TypeScript, React-Native, and TailwindCSS.
+          </div>
           <div className="text-md mt-4 font-semibold italic text-gray-400">
             &quot;Make it work, make it right, make it fast. &quot; - Kent Beck
           </div>
