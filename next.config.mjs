@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  basePath: "/gh-pages",
   experimental: {
     appDir: true,
     mdxRs: true,
@@ -16,14 +18,6 @@ const nextConfig = {
       "img.freepik.com",
     ],
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
-  modularizeImports: {
-    "react-icons/ri": {
-      transform: "react-icons/ri/{{member}}",
-    },
-    "react-icons/si": {
-      transform: "react-icons/si/{{member}}",
-    },
   },
   reactStrictMode: true,
   webpack(config) {
