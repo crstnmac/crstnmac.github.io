@@ -2,13 +2,7 @@
 
 import {withContentlayer} from "next-contentlayer";
 
-const isProd = process.env.NODE_ENV === "production";
-
 const nextConfig = {
-  assetPrefix: isProd ? "/crstnmac.github.io/" : "",
-  images: {
-    unoptimized: true,
-  },
   output: "export",
   basePath: "/gh-pages",
   experimental: {
