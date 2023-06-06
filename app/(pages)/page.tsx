@@ -16,7 +16,7 @@ export default function Home() {
       info: [
         {
           place: 'Work from home',
-          date: "Oct'22",
+          date: "Oct'22 - Present",
           topic: 'Frontend Developer',
           event: 'Timeless',
           eventlink: 'https://timeless.co/',
