@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${firaCode.variable}`}>
       <head />
       <body
-        className={'group antialiased min-h-screen dark:bg-black-900 bg-brand-50 transition-colors duration-1000 ease-in-out'}
+        className={'group antialiased min-h-screen dark:bg-black-900 bg-white-300 transition-colors duration-1000 ease-in-out'}
       >
         <Providers>
           <Background
