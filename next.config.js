@@ -4,7 +4,7 @@ const {withContentlayer} = require("next-contentlayer");
 
 module.exports = withContentlayer({
   output: "export",
-  basePath: process.env.NODE_ENV === "production" ? "/https://crstnmac.github.io": undefined,
+  basePath: process.env.NODE_ENV === "production" ? "/crstnmac.github.io": undefined,
   experimental: {
     appDir: true,
   },
