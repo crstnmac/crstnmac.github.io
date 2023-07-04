@@ -1,8 +1,8 @@
-import { formatDate } from "lib";
-import { Snippet } from "contentlayer/generated";
-import { Box, Link } from "components";
+import {formatDate} from 'lib'
+import {Snippet} from '.contentlayer/generated'
+import {Box, Link} from 'components'
 
-export default function BlogSection({ snippets }: { snippets: Snippet[] }) {
+export default function BlogSection({snippets}: {snippets: Snippet[]}) {
   return (
     <Box as="section" className="animate-in fade-in duration-500 mx-0" fullSize>
       {snippets.length > 1 ? (
@@ -41,5 +41,5 @@ export default function BlogSection({ snippets }: { snippets: Snippet[] }) {
         )}
       </div>
     </Box>
-  );
+  )
 }

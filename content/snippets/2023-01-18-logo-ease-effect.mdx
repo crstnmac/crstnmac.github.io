@@ -1,25 +1,25 @@
 ---
-title: "Logo ease effect"
-description: "Smooth up down transition using bare native react-native animations api"
-date: "01-18-2023"
+title: Logo ease effect
+date: 2023-01-18
+description: Smooth up down transition using bare native react-native animations api
 ---
 
 <CodeTitle title="app.tsx" lang="tsx" />
 
 ```ts
-import * as React from "react";
-import { Image, View, StyleSheet, Animated, Easing } from "react-native";
-import Constants from "expo-constants";
-import { useRef } from "react";
+import * as React from 'react'
+import {Image, View, StyleSheet, Animated, Easing} from 'react-native'
+import Constants from 'expo-constants'
+import {useRef} from 'react'
 
 function useMountEffect(effect: React.EffectCallback): void {
   React.useEffect(() => {
-    effect();
-  }, [effect]);
+    effect()
+  }, [effect])
 }
 
 export default function App() {
-  const easeValue = useRef(new Animated.Value(0));
+  const easeValue = useRef(new Animated.Value(0))
 
   useMountEffect(() => {
     Animated.loop(
@@ -37,42 +37,42 @@ export default function App() {
           useNativeDriver: true,
         }),
       ])
-    ).start();
-  });
+    ).start()
+  })
 
   const ease = easeValue.current.interpolate({
     inputRange: [0, 10],
     outputRange: [0, 30],
-  });
+  })
 
   return (
     <View style={styles.container}>
       <Animated.View
         style={{
-          transform: [{ translateY: ease }],
+          transform: [{translateY: ease}],
         }}
       >
         <Image
-          source={require("./assets/snack-icon.png")}
+          source={require('./assets/snack-icon.png')}
           style={styles.image}
         />
       </Animated.View>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     paddingTop: Constants.statusBarHeight,
-    backgroundColor: "#ecf0f1",
+    backgroundColor: '#ecf0f1',
     padding: 8,
   },
   image: {
     width: 100,
     height: 100,
   },
-});
+})
 ```
