@@ -1,13 +1,14 @@
-import { BlogSection, Box, AboutMe, ExperienceSection } from "components";
-import { allBlogs } from "contentlayer/generated";
-import { compareDesc } from "date-fns";
+
+import {  Box, AboutMe, ExperienceSection } from "components";
+// import { allBlogs } from "contentlayer/generated";
+// import { compareDesc } from "date-fns";
 
 export default function Home() {
-  const posts = allBlogs
-    .filter((post) => post.published)
-    .sort((a, b) => {
-      return compareDesc(new Date(a.date), new Date(b.date));
-    });
+  // const posts = allBlogs
+  //   .filter((post) => post.published)
+  //   .sort((a, b) => {
+  //     return compareDesc(new Date(a.date), new Date(b.date));
+  //   });
 
   const experiences = [
     {
@@ -15,15 +16,25 @@ export default function Home() {
       emoji: 'boy-coding',
       info: [
         {
+          place: 'Mumbai, IN',
+          date: 'Nov 2023 - Present',
+          topic: 'Fullstack Developer',
+          event: 'BarrierBreak',
+          eventlink: 'https://www.barrierbreak.com/',
+          description: 'Working as a Fullstack Engineer',
+          img: 'barrierbreak',
+          active: 'Present',
+          imgAlt: 'Image',
+        },
+        {
           place: 'Work from home',
-          date: "Oct'22 - Present",
+          date: 'Oct 2022 - Oct 2023',
           topic: 'Frontend Developer',
           event: 'Timeless',
           eventlink: 'https://timeless.co/',
-          description: 'Working as a Frontend Developer',
+          description: 'Working as a Frontend Engineer',
           img: 'timeless',
-          active: 'Present',
-          imgAlt: 'Image',
+          imgAlt: 'timeless',
         },
         {
           place: 'Bangalore,IN',
@@ -49,52 +60,52 @@ export default function Home() {
       ],
     },
     {
-      name: "Public Speaking",
-      emoji: "fancy-face",
+      name: 'Public Speaking',
+      emoji: 'fancy-face',
       info: [
         {
-          place: "Bangalore,IN",
-          date: "25 Jan 2020",
-          topic: "Workshop - Fullstack Webapp using Vue & MongoDB",
-          event: "Free Software Movement Karnataka",
-          eventlink: "https://fsmk.org",
+          place: 'Bangalore,IN',
+          date: '25 Jan 2020',
+          topic: 'Workshop - Fullstack Webapp using Vue & MongoDB',
+          event: 'Free Software Movement Karnataka',
+          eventlink: 'https://fsmk.org',
           description:
-            "In this 1 week workshop I spoke about how you can make a web application using Vue,MongoDB and NodeJS",
-          img: "fsmk2020",
-          imgAlt: "Image",
+            'In this 1 week workshop I spoke about how you can make a web application using Vue,MongoDB and NodeJS',
+          img: 'fsmk2020',
+          imgAlt: 'Image',
         },
       ],
     },
     {
-      name: "Education",
-      emoji: "nerd",
+      name: 'Education',
+      emoji: 'nerd',
       info: [
         {
-          place: "Everywhere",
-          topic: "Self-learner",
+          place: 'Everywhere',
+          topic: 'Self-learner',
           about:
-            "From each job, class, co-worker, book, article, meet-up or life experience.",
+            'From each job, class, co-worker, book, article, meet-up or life experience.',
           description:
             "This is how I learnt the 80% of what I know now and how I improve it. At the moment I'm learning ",
-          learnt: "TypeScript,Angular & Spring Boot",
-          gif: "selflearn",
-          active: "Always",
+          learnt: 'TypeScript,Angular & Spring Boot',
+          gif: 'selflearn',
+          active: 'Always',
         },
         {
-          place: "Mangalore,IN",
+          place: 'Mangalore,IN',
           date: "Aug'16 - Sep'20",
-          topic: "Computer Science, Bachelor Degree",
-          event: "Vivekananda College of Engineering and Technology",
-          eventlink: "https://vtu.ac.in",
+          topic: 'Computer Science, Bachelor Degree',
+          event: 'Vivekananda College of Engineering and Technology',
+          eventlink: 'https://vtu.ac.in',
           description:
-            "I studied my university degree under Visvesvaraya Technological University(VTU). Here is what I learnt: ",
-          learnt: "Engineering Subjects, Grow as a person",
-          img: "vcet",
-          imgAlt: "VCET Puttur",
+            'I studied my university degree under Visvesvaraya Technological University(VTU). Here is what I learnt: ',
+          learnt: 'Engineering Subjects, Grow as a person',
+          img: 'vcet',
+          imgAlt: 'VCET Puttur',
         },
       ],
     },
-  ];
+  ]
 
   return (
     <Box as="section">
