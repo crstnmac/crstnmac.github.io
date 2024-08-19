@@ -1,6 +1,7 @@
 import {PropsWithChildren} from 'react'
 import {Box, Link, Picture} from 'components'
 import {t} from 'lib'
+import {Squircle} from '@squircle-js/react'
 
 interface IInfo {
   place?: string
@@ -55,9 +56,11 @@ export default function Experience(props: PropsWithChildren<IExperiences>) {
           </div>
           <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
             {exp.info.map((exp, idx) => (
-              <div
+              <Squircle
+                cornerRadius={40}
+                cornerSmoothing={1}
                 key={idx}
-                className="break-words p-6 rounded-3xl border-[0.5px] dark:border-black-600 border-black-200 dark:bg-black-800 bg-black-100 flex items-center"
+                className="break-words p-6 rounded-3xl border-[1px] dark:border-black-800 border-black-100 dark:bg-black-800 bg-gray-100 flex items-center "
               >
                 <div className="flex flex-col gap-6">
                   <div className="w-20 h-20 rounded-full">
@@ -110,7 +113,7 @@ export default function Experience(props: PropsWithChildren<IExperiences>) {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Squircle>
             ))}
           </div>
         </div>

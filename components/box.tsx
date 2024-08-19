@@ -1,3 +1,4 @@
+import { Squircle } from "@squircle-js/react";
 import { t } from "lib";
 
 interface IBox {

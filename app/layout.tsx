@@ -34,7 +34,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       <head />
       <body
         className={
-          'group antialiased min-h-screen dark:bg-black-900 bg-white-300 transition-colors duration-1000 ease-in-out'
+          'group antialiased min-h-screen dark:bg-black-900 bg-neutral-200 transition-colors duration-1000 ease-in-out'
         }
       >
         <Providers>

@@ -18,7 +18,7 @@ export default function Header() {
           <div className="flex items-center hover:animate-jelly">
             <Link
               href="/"
-              className="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r  from-yellow-400 via-purple-500 to-green-400 dark:from-yellow-300 dark:via-purple-400 dark:to-green-300 animate-jelly flex flex-row flex-nowrap items-center justify-start"
+              className="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r bg-black-900 dark:bg-black-200 animate-jelly flex flex-row flex-nowrap items-center justify-start"
             >
               crstnmac
             </Link>

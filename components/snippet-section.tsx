@@ -16,7 +16,7 @@ export default function BlogSection({snippets}: {snippets: Snippet[]}) {
             {snippets.map((b) => (
               <div
                 key={b._id}
-                className="group p-2 w-full sm:w-[330px] flex-none rounded-2xl  bg-black-200 dark:bg-black-800 transition duration-700 ease-in-out"
+                className="group p-2 w-full sm:w-[330px] flex-none rounded-2xl border-black-800 dark:border-black-200  bg-black-100 dark:bg-black-800 transition duration-700 ease-in-out"
               >
                 <Link
                   href={`/snippets/${b.slugAsParams}`}
