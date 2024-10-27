@@ -6,6 +6,7 @@ import {Inter, Fira_Code} from 'next/font/google'
 import React from 'react'
 import './globals.css'
 // const Providers = dynamic(() => import('components/providers'), { ssr: false })
+import Script from 'next/script'
 
 import {useTheme} from 'next-themes'
 import {Providers} from 'components'
