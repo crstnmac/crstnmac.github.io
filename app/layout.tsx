@@ -31,6 +31,11 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
         name="google-site-verification"
         content="RIIKLI5xvbcXCzC98lcgLO4kWttNZoJhcSdVcSFvdEE"
       />
+      <Script
+        defer
+        src="https://umami.criston.uk/script.js"
+        data-website-id="a6d91fe7-f7f9-4998-af0b-6a79859d1e63"
+      />
       <head />
       <body
         className={
